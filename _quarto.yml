@@ -1,6 +1,10 @@
 project:
   type: manuscript
 
+format-links: false
+
+notebook-links: false
+
 execute:
   freeze: auto
 
