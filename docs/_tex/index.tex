@@ -1,0 +1,1959 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+]{agujournal2019}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\usepackage{url} %this package should fix any errors with URLs in refs.
+\usepackage{lineno}
+\usepackage[inline]{trackchanges} %for better track changes. finalnew option will compile document with changes incorporated.
+\usepackage{soul}
+\linenumbers
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Chronovaccination: the competitive edge in vaccine effectiveness?},
+  pdfauthor={Allan James},
+  pdfkeywords={circadian, vaccines, chronovaccination, chronotherapy},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\journalname{Time-of-day of Vaccination}
+
+\draftfalse
+
+\begin{document}
+\title{Chronovaccination: the competitive edge in vaccine
+effectiveness?}
+
+\authors{Allan James\affil{1}}
+\affiliation{1}{Independent researcher, }
+\correspondingauthor{Allan James}{allanjames1506@gmail.com}
+
+
+\begin{abstract}
+Although chronovaccination - controlling the time of day of vaccination
+(TODV) to enhance protective immunity - has been described as a
+potential paradigm shift in vaccine immunology\textsuperscript{1},
+unequivocal evidence for clinical benefit outweighing other societal and
+practical considerations has yet to be established\textsuperscript{2}.
+The current mixed evidence for chronovaccination providing an additional
+competitive edge to vaccine effectiveness is likely due to complex
+population level interactions between various circadian, environmental,
+and sociodemographic factors influencing antibody responses to vaccines.
+Nonetheless, TODV shows the greatest potential for sub-cohorts of
+populations, particularly older age, and immunocompromised groups. In
+these contexts, this review provides a Person, Place and Time
+consideration of the factors influencing the outcomes of
+chronovaccination studies.
+\end{abstract}
+
+\section*{Plain Language Summary}
+Researchers have asked whether there is a `sweet spot' in the day where
+vaccination is most effective in terms of providing long-term
+protection. So far, their answers have not been crystal clear, probably
+due to the different ways in which studies are performed and the daily
+variability of our immune system responses for populations in our modern
+24/7 society. However, scheduling vaccinations focussed on distinct
+phases of the day, mornings, afternoons, or evenings for example, might
+be beneficial for groups where a boost in vaccine effectiveness may be
+especially welcome. This review sets out the key concepts when thinking
+about how our internal timing mechanism -- our circadian clock -- might
+be used to get the most out of vaccinations, similar to how our clocks
+are harnessed in other areas of society.
+
+
+
+
+\begin{figure}[H]
+
+{\centering \pandocbounded{\includegraphics[keepaspectratio]{images/chronovacc_graphical_abstract2.png}}
+
+}
+
+\caption{Graphical abstract}
+
+\end{figure}%
+
+\section{Introduction}\label{introduction}
+
+Researchers in epidemiology and public health commonly use three
+descriptive variables - Person, Place and Time - to look for
+associations and health determinants explaining health phenomena. This
+review highlights the key features of the mammalian circadian clock and
+its role in the daily gating of our immune function, and uses Person,
+Place and Time to describe the features that impact the close
+relationship between circadian clocks, their environment, and our immune
+system. An understanding of these relationships is crucial to our
+awareness of confounding factors in epidemiological studies addressing
+the question as to whether daily variations in our immune response
+extends to our antibody response to vaccination.
+
+\subsection{The circadian clock}\label{the-circadian-clock}
+
+Whether we realise it or not, our internal timing mechanism, or clock,
+dictates our daily lives by harmonising our physiology with alterations
+in our external environment, principally the predicable alterations in
+light and dark that are hallmarks of life on a revolving planet.
+Simplistically, the clock is a network of clock genes whose sequential
+transcription and translation progress over a near 24-hour period. These
+daily cycles, often referred to as circadian rhythms (derived from the
+Latin `circa diem' or `about a day'), orchestrate virtually all aspects
+of our physiology, including sleep-wake cycles, behaviour and locomotor
+activity, body temperature cycles, cardiovascular and digestive
+processes, endocrine systems and metabolic and immune
+functions\textsuperscript{3--8}. A copy of the clock is found in most
+cell types including cells of the immune system\textsuperscript{8,9},
+but precise and robust coordination of circadian rhythmicity is the
+product of a network of tissue and organ clocks, including a `master'
+clock -- primarily influenced by light - situated in the suprachiasmatic
+nucleus (SCN) of the hypothalamus brain region that dictates the overall
+pace for synchronising `slave' clocks located in virtually all tissues
+and organs of the body\textsuperscript{10}.
+
+\subsection{Clock plasticity permits
+entrainment}\label{clock-plasticity-permits-entrainment}
+
+Clocks exist in Nature where the environment is in a constant state of
+flux. Over the course of evolution, clocks have developed the capacity
+to adjust their internal rhythms based on fluctuating environmental
+variables, and a key consequence of this plasticity is the ability for
+circadian clocks to be reset daily, or entrained, by these signals, or
+zeitgebers (`time givers') - notably light, but can be other cues, for
+example temperature, food availability, hormones\textsuperscript{11,12}
+and even social signals\textsuperscript{13}. Entrainment allows the
+clock to readapt upon temporary desynchronisation, whether this is due
+to misalignment between an individual's internal circadian phase and
+their environment, for example when crossing multiple Time Zones
+(`jetlag'), as a result of abrupt changes to work patterns, such as
+shift work, or due to social jetlag\textsuperscript{14} - the
+discrepancy between work and free days, between social and biological
+time. Daylight saving is another example of temporary desynchronisation
+in which misalignment occurs between endogenous circadian phase and
+shifted clock time. While the SCN master pacemaker itself adjusts to
+changes in the environment relatively quickly, the slave clocks can take
+longer to adjust\textsuperscript{15,16}. Chronic circadian disruption
+has serious implications for human health and can increase the risk for
+the expression and development of neurologic, psychiatric,
+cardiometabolic, and immune disorders\textsuperscript{17,18}.
+
+\subsection{Clocks, what are they good
+for?}\label{clocks-what-are-they-good-for}
+
+Broadly speaking biological clocks allow us to adapt to and anticipate
+temporal changes in the environment. Clocks have evolved over billions
+of years, possibly in response to the need for single celled eukaryotes
+to `escape from light' to avoid the damaging effects of ionising
+radiation and oxidative stress during cell
+division\textsuperscript{19,20}. At the core of mammalian clockwork are
+a set of conserved cellular transcription factor proteins operating as
+interlocked rhythmic transcription-translation feedback loops. The
+formation, cellular trafficking and degradation of different clock
+protein complexes throughout this transcription-translation cycle
+generates the intrinsic nature and stability of the clock, ultimately
+driving the rhythmic expression of the clock genes themselves as well as
+`outputs of the clock' such as clock-controlled
+genes\textsuperscript{9}. Essentially then, the rhythmicity of the core
+clock radiates out to the physiological outputs of the clock via
+interaction with clock-controlled genes. The clock therefore does not
+orchestrate a single output, but rather partitions physiological outputs
+to appropriate phases of the day. This is beneficial because by timing
+physiological processes appropriately -- or `gating' these processes --
+cellular resources can be effectively and efficiently allocated.
+
+Clocks provide a competitive advantage for the organisms they serve. The
+best demonstration of this is for experiments in plant circadian biology
+where for plants genetically compromised in the pacing of their clock -
+and therefore unable to match the light and dark conditions of their
+environment -- survived more poorly than plants able to correctly match
+the external light-dark cycle\textsuperscript{21}. Clocks anticipate
+predictable changes in the environment (light \& dark, warm \& cool, for
+example), rather than reacting to change. For example, in plants again,
+it has been shown that photosynthetic machinery is assembled daily
+before the onset of dawn in anticipation of the availability of light so
+that energy harvesting is optimised\textsuperscript{22}. In mammalian
+systems the liver and intestine clocks anticipate, rather than react to,
+mealtimes to coordinate food availability with nutrient processing and
+energy demand\textsuperscript{4,23}.
+
+The `clock as a tool' for optimising performance is increasingly being
+harnessed in modern life. A good example of this is in the arena of
+elite sports, often occurring across multiple Time Zones, where adapting
+training strategies to align with circadian regulation is now viewed as
+essential. Marginal, yet meaningful, advantages over competition can be
+gained when clock factors are keyed into training
+regimes\textsuperscript{24}. `Tools for the clock' are also increasingly
+apparent, for example the development of non-invasive wearable smart
+devices for characterising the clock, viewed as crucial for advancing
+personalised medicine -- developments that can be viewed as providing an
+extra edge or dimension via the design of individualised treatment plans
+tailored to the specific needs patients\textsuperscript{25,26}.
+
+Therefore, clocks themselves inherently provide a competitive edge and,
+thanks to decades of fundamental research into circadian clock function,
+we increasingly see clock knowledge harnessed for gaining competitive
+edges in various societal contexts, many of which are referred to as
+chronotherapies. Chronovaccination -- a vaccination chronotherapy -- has
+the potential to provide a competitive edge in vaccine effectiveness.
+
+\subsection{Circadian gating}\label{circadian-gating}
+
+A useful concept for the utility of circadian clocks is the idea that
+they gate biological events to particular times of the
+day\textsuperscript{27}. While circadian gating has different meanings
+depending on the types of physiology or behaviour under investigation,
+for example whether entrainment to zeitgebers is gated or the amplitude
+of rhythms are modulated, gating can be simply thought of as time
+periods when the clock allows or forbids a particular biological
+process. Chronotherapy harnesses the principles of circadian gating and
+has been, for some time now, regarded as a beneficial and wide-ranging
+socio-economic tool, from the timing of the application of
+agrochemicals\textsuperscript{28}, to the administration of anti-malaria
+drugs at specific times of the day\textsuperscript{29}, to the rhythmic
+responses to drugs in mammals\textsuperscript{30,31}. In the latter case
+drug timing is optimised to enhance drug efficacy, reduce toxicity and
+adverse side effects and improve patient outcomes in, for example,
+cancer treatments\textsuperscript{31,32}. A seminal study in 2014 by
+Zhang \emph{et al.}\textsuperscript{30} found that 119 of the WHO's list
+of essential medicines target a circadian gene, and since many of these
+drugs have short half-lives (\textless6 h), the impact of the time of
+administration on their action is significant\textsuperscript{30}. For
+example, statins are a class of drug that lower cholesterol levels by
+inhibiting HMGCR (HMG-CoA reductase)\textsuperscript{33}. HMGCR is the
+rate-limiting enzyme in cholesterol biosynthesis and its activity peaks
+during the night. Statins with short half-lives showed maximal efficacy
+when taken in the evening (when their target gene was most
+active)\textsuperscript{30}. There are now numerous examples of health
+conditions where timed drug treatments align with the circadian gated
+biological target, so called `clocking the drugs'\textsuperscript{31},
+examples include hypertension, diabetes and
+anti-inflammation\textsuperscript{31,34,35}. Despite this, many in the
+scientific community still consider `time-of-day' a neglected variable
+in fundamental biological and clinical research\textsuperscript{35--37}.
+The lack of circadian enlightenment extends to clinical practice where
+only 4 of the 50 most prescribed drugs in the United States in 2019 had
+time-of-day dosing recommendations from the Food and Drug
+Administration, and the 20th World Health Organization's Model List of
+Essential Medicines makes no mention of dosing time\textsuperscript{38}.
+There have therefore been calls for time-of-day to be recognised as a
+key biological variable, similar in status to the ubiquitous sex and age
+variables, in both clinical studies and clinical
+practice\textsuperscript{35,38,39}. Indeed, chronotherapies that
+consider time of day may significantly improve clinical trial success
+and therefore ultimately patient care\textsuperscript{39}.
+
+\subsection{Clock gating of the immune
+response}\label{clock-gating-of-the-immune-response}
+
+Innate and adaptive defences constitute two functionally distinct, yet
+intertwined, arms of defence against pathogenic invasion or insult, and
+while the former arm is regarded as a first line of defence with no
+memory of the challenge, adaptive immunity provides more finely-tuned,
+specific recognition of foreign particles and the selective expansion of
+cells prepared to target specific pathogens and the development of
+immunological memory\textsuperscript{40}. Vaccinations utilise the
+adaptive immune system to generate antibodies towards a target antigen
+as well as the development of `immune memory' - the capacity to respond
+quicker and more effectively when challenged after an initial
+exposure\textsuperscript{41}. The function of the adaptive immune system
+is regulated by the circadian clock, with the clock contributing to, for
+example, the 24-h regulation of homeostatic processes underlying
+maintenance of adaptive immunity, such as lymphocyte (white blood cell)
+trafficking\textsuperscript{40,42,43}, where the clock essentially
+modulates leukocyte migration across the body, effectively gating the
+number of leukocytes at specific sites throughout the body across the
+day\textsuperscript{44}.
+
+It is therefore generally regarded that the circadian clock is a potent
+regulator of immune function\textsuperscript{6--8,40,45}, however less
+clear is why our immunity is gated by the clock? One idea is that since
+metabolic and immune processes are intricately linked, over the course
+of evolution these processes have been partitioned\textsuperscript{46}.
+This is evidenced by disruption of clock gene function resulting in a
+host of metabolic disorders, which are often associated with immune
+observable traits, or phenotypes\textsuperscript{47}. Another idea is
+that heightened immune sensitivity is an adaptation to recurring
+environmental challenges (such as time-of-day prominence of pathogens),
+with the additional benefit of dimming immune responses at times when
+they are not needed\textsuperscript{9}, chiming with the idea that the
+metabolic costs of immune activation are monitored closely by the clock
+so that immunity-associated metabolic costs are kept in check, in turn,
+enhancing organismal fitness\textsuperscript{45}.
+
+There are many examples of the detrimental effects of a disrupted clock
+on aggravating disease pathology related to our immune system.
+Employment in rotating shift work is a prime example and has been
+associated with an increased risk of developing inflammatory diseases
+such as psoriasis and irritable bowel syndrome\textsuperscript{48,49}.
+It is also well known that chronic inflammatory disease symptoms can
+show time-of-day variation; for example, asthma, whereby symptoms are
+exacerbated in the early morning\textsuperscript{50}, or increased joint
+stiffness and pain in the early morning with rheumatoid arthritis
+sufferers\textsuperscript{51}. Other studies have linked social jetlag
+to higher levels of inflammatory markers, and a study of the effects of
+circadian and sleep rhythm disruptions on immune biomarkers among
+hospital healthcare professionals working night shifts and rotating day
+shifts showed that night workers altered pattern expressions of immune
+cells biomarkers\textsuperscript{52} may increase vulnerability to
+infections and reduce vaccination efficiency. Increased inflammation can
+weaken the body's defences and make individuals more susceptible to
+infections and reduce vaccine efficiency\textsuperscript{52}.
+
+However, while this discussion has focussed on the role of the clock in
+gating immune function, the influence of sleep on immune function cannot
+be ignored. Traditionally, clocks, sleep and the immune system have been
+regarded as separate subjects, but it is increasingly clear the extent
+of the interconnectivity between circadian rhythms, sleep and immune
+function, and their implications for public health. A key concept worth
+considering is that, both circadian rhythm and sleep disruption happen
+concurrently every day, and this is especially true in modern life
+through the widespread experiences of shift work, light at night, and
+social jet lag\textsuperscript{53}.
+
+\section{Person - Chronotype}\label{person---chronotype}
+
+Timekeeping is not universally the same in populations, and we all
+possess the potential for different `settings' of the clock. These
+versions -- or chronotypes - fall on a continuum, at the either end of
+which are individuals colloquially referred to as morning larks and
+night owls. Larks have a morning type (`morningness') and prefer to
+awaken early in the morning and feel most active during the earlier
+parts of the day, while owls have an evening type (`eveningness'),
+preferring to awaken later in the day and typically feel most active and
+motivated in the late evening or at night. Individuals who fall between
+the ends of the continuum are referred to as intermediate
+types\textsuperscript{54}. While chronotype is largely imprinted in
+small differences in our clock genes, changes in morning/evening
+predisposition adapts with life span with morning preference during
+childhood development, evening type in adolescence and early adulthood,
+then progressively morning preference with age
+advancement\textsuperscript{55,56}. Chronotype is a risk factor for
+cardiometabolic and mental health, with evening types being more
+susceptible to conditions such as obesity and bipolar
+disease\textsuperscript{57,58}. A systematic review of evidence has also
+shown a trend for evening chronotypes to experience more serious
+symptoms for immune-mediated inflammatory diseases\textsuperscript{59}.
+There is an appreciation that sex as a biological variable might impact
+immune responses. For example, adult females it seems produce higher
+antibody responses to diverse vaccines against, influenza, hepatitis B,
+yellow fever, rabies, herpes, and smallpox
+viruses\textsuperscript{60,61}. However, females may experience greater
+vulnerability to circadian misalignment from factors like shift work,
+possibly because females are more likely to be classified as morning
+types as compared to males meaning that there is potentially more severe
+misalignment with the 24-hour day-night cycle imposed by shift
+work\textsuperscript{62}.
+
+\section{Place - Circadian clocks and our modern
+lifestyles}\label{place---circadian-clocks-and-our-modern-lifestyles}
+
+Modern life and our environment also shape chronotype. Roenneberg \&
+Merrow\textsuperscript{18} describe two distinct environmental scenarios
+influencing clock entrainment; modern/industrial and ancestral/rural
+entrainment of the clock by weak and strong zeitgebers, respectively.
+Modern/industrial entrainment features indoor light and artificial light
+at night and a concomitant reduction in the difference between the
+maximum and minimum amount of light exposure during the day and the
+level of darkness at night. This environment predisposes individuals to
+later chronotypes because of the blurring of the alignment of internal
+clock rhythms with 24-hour day-night patterns. This contrasts with
+ancestral/rural entrainment featuring bright daylight and no artificial
+light at night, where clock rhythms are effectively synchronised to the
+24-hour day-night pattern. Seasons also modulate chronotype; in winter,
+chronotype is also later, probably due to a combination of later sunrise
+and lower light levels\textsuperscript{63,64}. Therefore, a wide range
+of factors inherent in modern life and our environment influence
+chronotype -- although genetics and age play roles, external factors
+such as light, social activities and school or work schedules can mask
+our endogenous chronotype.
+
+Light at night is a hallmark for our modern lifestyle and is thought to
+be a key driver of social jetlag -- a condition resembling a mild but
+chronic form of shift work and epidemiological studies show that this
+correlates with health problems, including the tendency towards being
+overweight. Modern life can therefore be thought of as living against
+the circadian clock in that it induces a sub-optimal form of
+entrainment, a mis-match between the natural rhythm of our light:dark
+environment and our physiology driven by our internal, or endogenous,
+circadian clock\textsuperscript{18}. The evening, or `owl' chronotype --
+typical of teenage years -- appears to be particularly at odds with our
+modern society that is skewed towards morning-orientated activities such
+that individuals are forced to live in a state of circadian
+misalignment, the schism being their innate tendency to wake late and
+the societal demands of attending school or work in the
+morning\textsuperscript{65}. A study of chronotypes in school age
+children (8-12 years) showed that evening types have altered sleep
+patterns, social jet lag, higher BMI and higher metabolic risk (higher
+values of insulin, glucose, triglycerides and
+cholesterol)\textsuperscript{66}. Also, while light at night not only
+shifts populations towards later chronotypes, modelling studies suggest
+that it also has the tendency to reinforce evening preference and
+exacerbate circadian and sleep-related problems associated with the owl
+chronotype\textsuperscript{67}. In 2022, around 27\% of the UK workforce
+were employed in the evening or during the night\footnote{Office for
+  National Statistics (ONS) The Night-Time Economy, UK: 2022
+  \url{https://www.ons.gov.uk/businessindustryandtrade/business/activitysizeandlocation/articles/thenighttimeeconomyuk/2022}},
+compared to a reported 16\% of adults who usually work a non-daytime
+schedule in 2018 in the US\textsuperscript{17}. Working indoors, in
+low-light or artificial light conditions with relatively little blue
+light, does not provide the same light exposure as natural daylight, and
+is a risk factor for disruption to the harmonious relationship between
+our endogenous clock rhythms and the external environment. Natural
+daylight at high intensities has been shown to be particularly
+beneficial for advancing the timing of sleep to earlier hours thereby
+lengthening the duration of sleep, and for improving sleep
+quality\textsuperscript{68}. A 2002 publication estimated that around
+70\% of US workers are employed in indoor work
+environments\textsuperscript{69}.
+
+Outside our homes and work environments, the biological effects of light
+pollution on human wellbeing and natural ecosystems are significant,
+exemplified by a UK Royal Commission on Artificial Light in the
+Environment\footnote{The Royal Commision on Environmental Pollution.
+  Artificial Light in the Environment (2009)
+  \url{https://www.gov.uk/government/publications/artificial-light-in-the-environment}}
+that recognises the explosive growth in outdoor lighting in the UK since
+the 1940's -- and the growing sense of loss of `dark skies' together
+with the resultant cultural disconnect\textsuperscript{70}. The Royal
+Commission comparison of light at night light from 1993 to 2000 shows
+that almost every area in the UK has become brighter, particularly rural
+areas such that in 2003 only 22\% of England possessed pristine night
+skies compared to 77\% for Scotland, although in Scotland the main
+populated areas stretching from Glasgow to Edinburgh -- the `central
+belt' - shows almost unbroken levels of light pollution, creeping out
+from the cities and towns to blur any distinction between urban and
+rural areas\footnote{Campaign to Protect Rural England. Night Blight:
+  Mapping England's light pollution and dark skies (2016)
+  \url{https://www.cpre.org.uk/resources/night-blight-2016-mapping-england-s-light-pollution-and-dark-skies/}}.
+The Royal Commission also recognised that since light is perceived as a
+natural and benign phenomenon, the insidious and negative issues of
+`light blight' on our natural world are overlooked when any other
+anthropogenic impact would naturally provoke stronger interogation,
+although artificial light as a neglected pollutant was recognised as a
+public health issue in a 2023 UK House of Lords Science and Technology
+Committee investigation\footnote{House of Lords Science and Technology
+  Committee 2nd Report of Session 2022--23. The neglected pollutants:
+  the effects of artificial light and noise on human health (2023)
+  \url{https://committees.parliament.uk/publications/40937/documents/199438/default/}}.
+
+Place -- rurality or urbanity for example -- influences the daily
+synchronisation of our internal endogenous clock with the light:dark
+environment, conceptually emboldening a harmonised, ancient, form of
+entrainment or a mis-matched, modern, socially jetlagged, form of
+entrainment, respectively. Although light is thought of as the principal
+zeitgeber, clock epidemiologists have wondered whether social cues --
+hardwired into the fabric of our lives by social constructs such as
+school or work times and governed by digital clock time -- can counter
+natural light:dark cues; after all rurality does not preclude a modern
+lifestyle. Roenneberg \emph{et al.}\textsuperscript{13} teased apart
+this question of the relative balance of the coupling of the circadian
+clock to natural `sun time' or to constructed `social time' in a
+population sized study -- disentangling the cues using the principle
+that within a Time Zone people and live and work to a common social time
+-- constant over multiple longitudes -- that is at odds with sun time
+that continually changes across longitude. The population study used
+individuals in towns and cities across Germany and measured their
+responses to a questionnaire based around their estimated chronotypes,
+finding that although the clock was principally entrained by sun time,
+individuals in lightly populated areas were more tightly coupled to sun
+time than those living in densely populated areas, leading the authors
+to conclude that the uncoupling was a reflection of the emboldening of
+social cues versus nature's light--dark cycles. Tipping this balance
+from environmental towards behavioural light--dark cycles is predicted
+to lead to later chronotypes, a characteristic increased population
+size\textsuperscript{13}. Our preference for aligning our clocks to sun
+time rather than clock time is seen with the effects of travel across
+Time Zones, where the clock dynamically re-entrains to external
+light/dark cycles and environmental cues in their new environment, with
+faster recovery from jetlag after westward, as opposed to eastward,
+travel, possibly as a result of a preference for the clock to delay,
+rather than advance, its entrainment\textsuperscript{71}. Where we
+reside in a Time Zone contributes to our harmony with sun time -- living
+on the western edge of a Time Zone where light later in the morning
+extends to later in the evening because of delayed solar time can result
+in circadian misalignment resulting in significant deleterious effects
+on human health outcomes\textsuperscript{72,73}. For example,
+cancer-specific mortality has shown to be a function of the distance
+from the eastern border of a Time Zone, with risks increasing and
+longevity decreasing from east to west\textsuperscript{74}. Reductions
+in sleep duration due to extra natural light at night because of the
+`western edge effect' was also found to have significant adverse effects
+on human health and on economic performance (per capita
+income)\textsuperscript{75}. Spain, geographically aligned with
+Greenwich Mean Time (GMT), operates on Central European Time (CET),
+while neighbouring Portugal operates on GMT. This discrepancy between
+social time and sun time leads to later bedtimes and meal schedules in
+regions northwestern Spain, potentially affecting sleep and overall
+circadian rhythmicity\textsuperscript{75}.
+
+\section{Time -- Immune function}\label{time-immune-function}
+
+Despite adaptive immunity occurring over a long period of time compared
+to the innate `first line of defence' response -- weeks compared to
+days\textsuperscript{76} -- studies have suggested that the timing of
+the initial immune stimulus can have lasting effects on immune
+(patho)physiology\textsuperscript{76--79}. This has led to the question
+as to whether daily immune rhythms could be used to target the adaptive
+immune system at the time of highest sensitivity to bring about enhanced
+vaccination responses\textsuperscript{80}. Experimental evidence for
+variation in antibody production after vaccination has been
+obtained\textsuperscript{81--85}, for example a large, randomised trial
+of different times of vaccination showed that morning vaccination
+enhanced the antibody response to the influenza
+vaccine\textsuperscript{84}. There has been some scepticism about the
+role of the clock in the development of adaptive
+immunity\textsuperscript{86} -- after all, how can a 24-h rhythm
+influence adaptive immunity responses forming over days and weeks?
+However, the step-by-step generation of the adaptive immune response
+over several weeks has been traced, where it was found that the timing
+of the initial immune challenge was imprinted on all subsequent
+downstream processes\textsuperscript{76}. Taken together these studies
+suggest a `sweet spot' at or just before the behavioural activity phase
+for optimal vaccination -- correlating with morning vaccination timing
+for human subjects.
+
+While daily timing is the focus of TODV, it seems that immune function
+is also sensitive to another predictable timing dimension -- seasonality
+-- the result of the axial tilt of the Earth combined with its orbital
+path around the Sun. A large population study of UK Biobank participants
+not only showed daytime variation in immune parameters, but also a
+seasonal variation, with lymphocyte numbers showing the greatest
+contrast\textsuperscript{64}. Daylength modulates with season and both
+the intensity and spectral composition of light to which people are
+exposed vary with season\textsuperscript{87}, and while direct evidence
+for seasonality in humans is limited\textsuperscript{88}, in animals the
+seasonal clock is generated by changes in thyroid hormones in the brain
+that respond to day length as signalled by the pineal hormone melatonin.
+A study collecting light quality across seasons using wearable
+colour-sensitive `actiwatch' devices in human subjects showed that
+summer subjects were exposed to twice as much blue light than winter
+subjects\textsuperscript{87}. The spectral sensitivity of the
+photopigment melanopsin, located in the human inner retina is known to
+be greatest for blue light and has been shown to mediate many aspects of
+non-vision related human behaviour and physiology such as sleep timing
+and daily melatonin rhythms\textsuperscript{87}. The relative
+contribution of blue light is therefore greater in summer compared to
+winter, and while blue-enriched light has positive effects on sleep
+quality, alertness and performance\textsuperscript{89}, the timing of
+blue light is important such that exposure at night with the overuse of
+electronic devices rich in LED exacerbates social
+jetlag\textsuperscript{90,91}, the resultant disrupted clock affecting
+the timing of hormone secretion, the activity of immune cells, and body
+temperature, and changes in mood at different times of day and
+night\textsuperscript{92}, and has been shown to be a risk factor for
+psychological disorders\textsuperscript{93}, and
+obesity\textsuperscript{94}.
+
+In comparison to the well characterised circadian clocks, other
+biological timers -- circatidal clocks, linked to the
+\textasciitilde12.4-h tidal cycle, and circalunar clocks, cycling every
+\textasciitilde29.5 days -- are less well understood and hotly debated
+to the present day\textsuperscript{95}. Both circalunar rhythms and
+circatidal rhythms are widespread in marine environments, but recent
+evidence suggests their potential influence on human
+health\textsuperscript{96}. Experiments in sleep laboratories, in which
+external light sources such as moonlight were systematically excluded,
+show the effect of the lunar cycle on sleep, with deep sleep patterns
+and total sleep time negatively and significantly reduced around full
+moon\textsuperscript{97}. Circatidal clocks are used by marine organisms
+to anticipate changes linked with the ebb and flow of tides, such as
+water levels, food availability, currents and
+temperature\textsuperscript{95} and a recent seminal study in humans
+intriguingly demonstrated 12-h rhythms in gene transcript
+levels\textsuperscript{98}. However there remains a debate as to the
+potential function of a 12-h mammalian clock - after all why would
+terrestrial animals need a \textasciitilde12 h rhythm generator if they
+are not subjected to tides. One line of thinking is that a mammalian
+12-h clock is either an evolutionary remnant of the marine circatidal
+clock or has evolved convergently, and that it facilitates the `rush
+hour' processing of elevated gene expression and processing around dawn
+and dusk\textsuperscript{99}. The clear characterisation of circatidal
+and circalunar rhythmicity in humans is challenging at the practical
+level, requiring strict control of light sources, as well as meal and
+sleep timing, and there remains the problem of elucidating if 12-h
+rhythms are mechanistically driven by the circadian clock, rather than
+by a dedicated oscillator, or simply driven by environmental cues such
+as light\textsuperscript{95}. A link between immune function and the
+potential twice daily circatidal rhythm anticipation of metabolic stress
+or circalunar rhythm sleep pattern modulation has not been made.
+Immunity, sleep, and metabolism are however intricately intertwined and
+understanding the influence of ultradian rhythms (period shorter than a
+day) and infradian rhythms (period longer than a day) on immune function
+homeostasis will pave the way to appreciating immune processes across
+different timescales.
+
+\section{Person, Place \& Time}\label{person-place-time}
+
+Populations therefore feature a rich mixture of chronotypes, young/old
+clocks with natural variation in our genetically predetermined lark and
+owl propensities interacting with, and ultimately being shaped by, their
+surroundings; for example, rural/urban settings and summer/winter light
+environments. Generally, less is known about how `slave' clocks, in
+peripheral organs (brain, heart, liver, gut, pancreas, adipose tissue,
+adrenal glands, lungs, and skeletal muscle\textsuperscript{12}) entrain
+with the SCN `master' clock and how potential misalignment
+mechanistically contributes to human health. Roenneberg \&
+Merrow\textsuperscript{18} point out, however, that there is likely to
+be a constellation of possible phase entrainments, or `phase maps',
+describing the entrainment between the master and slave clocks;
+reflecting the idea that we entrain differently at different times of
+our lives, at different times of the year and amongst each other, and
+whether we live in cities or in the country\textsuperscript{18}.
+Table~\ref{tbl-variables} summarises Person, Place \& Time variables
+relevant to chronovaccination studies.
+
+\begin{table}
+
+\caption{\label{tbl-variables}Person, Place \& Time variables for
+chronovaccination studies}
+
+\centering{
+
+}
+
+\end{table}%
+
+\section{Chronovaccination}\label{chronovaccination}
+
+Naturally, the question as to whether daily variations in our immune
+response extends to our antibody response to vaccination has been posed.
+Early work showed mixed evidence for effects of time of vaccination on
+antibody response, possibly as a reflection of low sample sizes,
+variable design, short-term follow-up, and differences in vaccine types.
+However, a large-scale cluster-randomised trial examined the influence
+of the timing of vaccination on influenza antibody titres and found that
+morning vaccination enhanced the antibody response to the influenza
+vaccine\textsuperscript{84}. Using a prospective cohort study design
+Zhang \emph{et al.}\textsuperscript{100} showed that vaccination in the
+morning lead to a stronger immune response to SARS-CoV-2 vaccine. In
+their 2022 review, Otasowie \emph{et al.}\textsuperscript{1} coined the
+term `chronovaccination' -- a term encapsulating the evidence of clock
+gating of the immune response and the potential of TODV for maximising
+vaccine immunogenicity. The authors highlighted four clinical studies
+demonstrating TODV, including the aforementioned first large-scale
+randomised controlled trial assessing the effect of different
+vaccination times for the influenza vaccine\textsuperscript{84}, an
+assessment of the effect of TODV on specific and non-specific immunity
+induced by the TB vaccine, Bacillus Calmette-Guérin
+(BCG)\textsuperscript{81}, and for two prospective cohort studies,
+including the aforementioned Zhang \emph{et al.} study, assessing
+antibody responses after administration of SARS-CoV-2 vaccines at
+different phases of the day\textsuperscript{100,101}.
+
+The Otasowie \emph{et al.}\textsuperscript{1} review, however, sets out
+conflicting evidence for the optimum TODV. The work by Zhang \emph{et
+al.}\textsuperscript{100} demonstrated that vaccination in the morning
+(9 am - 11 am) compared to vaccination in the afternoon (3 pm - 5 pm)
+lead to a stronger immune response to an inactivated SARS-CoV-2 vaccine
+(BBIBP-CorV, Sinopharm), while in contrast Wang \emph{et
+al.}\textsuperscript{101} showed, with vaccinating mRNA or Adenovirus
+based SARS-CoV-2 vaccines (Pfizer, mRNA bnt162b2 or AstraZeneca,
+Adenoviral AZD1222) in a larger cohort, that antibody responses were
+higher in those who were vaccinated later in the day (11 am - 10 pm)
+compared to those vaccinated in the morning (7 am - 11 am). Wang
+\emph{et al.}\textsuperscript{101} speculated that the use of the
+inactivated whole virus in the Zhang \emph{et al.}\textsuperscript{100}
+study might explain the difference in the TODV outcomes, and note
+several other potential factors complicating interpretation of the
+outcomes including altered sleep and shift-work patterns of the
+healthcare worker participants of the study potentially influencing
+vaccine responses.
+
+Recently Hazan \emph{et al.}\textsuperscript{102} carried out a
+retrospective large population cohort analysis of timestamped COVID-19
+vaccinations (1.5M individuals, age \textgreater{} 12 yo, 99.2\%
+receiving Pfizer-produced BNT162b2), using COVID-19 breakthrough
+infection and COVID-19--associated emergency department visits and
+hospitalisations as endpoints for cohorts split by vaccination timing
+(morning, afternoon, or evening). This study found lowest rates of
+breakthrough infection with late morning to early afternoon vaccination
+and highest rates associated with evening vaccination. Vaccination
+timing remained significant after adjustment for patient age, sex, and
+comorbidities. The benefits of daytime vaccination were concentrated in
+younger (\textless20 years old) and older patients (\textgreater50 years
+old)\textsuperscript{102}. Although vaccinations were not performed
+across 24-h cycles, the authors were able to demonstrate that the risk
+of COVID-19 breakthrough infection as a function of vaccination timing
+was sinusoidal in shape, displaying a periodicity of between 7.4 and
+16.7 hours, considerably shorter than the classical 24-h periodicity of
+circadian rhythms, suggesting that rhythms in vaccine effectiveness are
+potentially ultradian in nature, for example driven by a mammalian 12-h
+clock\textsuperscript{102}. Another retrospective large population
+cohort study (0.25M individuals, age \textless{} 6 yo), this time for
+the varicella vaccine, showed that vaccination in the morning and
+afternoon was associated with lower infection rates than evening
+vaccination\textsuperscript{103}. Like that for the risk of COVID-19
+breakthrough infection, varicella infection risk, after adjusting for
+ethnicity, sex, immunodeficiency, and obesity, followed a sinusoidal
+pattern consistent with a diurnal rhythm in vaccine effectiveness.
+
+Two independent systematic reviews\textsuperscript{2,104} have surveyed
+published studies on the human immune response to vaccination at
+different times of day in order to gauge the evidence supporting diurnal
+variation in the effectiveness of vaccination. Wyse \emph{et
+al.}\textsuperscript{2} noted the challenge in generalising the findings
+based on the heterogeneity of the studies surveyed, however the authors
+concluded that overall there was insufficient overall evidence that
+administration of vaccines at different times of day affected immune
+outcomes. On the other hand, Vink \emph{et al.}\textsuperscript{104}
+concluded that that morning vaccination enhanced antibody responses in
+adults aged 60 years and older, noting that this age group is a key
+demographic for influenza and COVID-19 vaccination. Studies qualified
+for inclusion in the Vink \emph{et al.} review if they measured
+antigen-specific antibody or T-cell responses following vaccination, and
+if these immune responses were compared between participants vaccinated
+at different time points during the day, whereas for Wyse \emph{et al.}
+studies were included if they reported any immune or clinical outcome
+following vaccination at a defined time of day.
+
+The Wyse \emph{et al.}\textsuperscript{2} review assessed over 3,100
+studies, 23 of which met their inclusion criteria. These studies were
+published between 1967 and 2024 and almost half of them included
+reported data collected for SARS-CoV-2 vaccination programs during the
+COVID-19 pandemic. The review authors found that most studies were
+biased by failing to account for immune status prior to vaccination,
+self-selection of vaccination time, or due to the presence of
+confounding factors such as sleep, chronotype, and shift work. Of these
+23 studies, the optimum TODV was concluded to be afternoon (5 studies),
+morning (5 studies), morning and afternoon (1 study), midday (1 study),
+and morning or late afternoon (1 study), with the remaining 10 studies
+reporting no effect. Of the studies that reported an association between
+TODV and outcome of vaccination, 3 presented data that could be used to
+estimate the size of this effect\textsuperscript{100,102,105}. For
+example, Hazan \emph{et al.}\textsuperscript{102} estimated that
+optimising the time of vaccination might improve vaccine effectiveness
+by 8.6--25\%.
+
+Vink \emph{et al.}\textsuperscript{104} identified 860 records through
+their literature search, 17 of which met their eligibility criteria;
+five investigated the effect of vaccination timing on immune responses
+to influenza vaccines\textsuperscript{84,85,106--108} and nine explored
+how time of day influences immune responses to SARS-CoV-2
+vaccines\textsuperscript{100,101,105,109--114}. Eleven out of the 17
+studies reported statistically significant effects of vaccination
+timing, with ten reporting stronger antibody responses following morning
+vaccination, while one study favoured vaccination later in the day. The
+strongest evidence for diurnal variation was found for influenza
+vaccines in older adults; sub-group analysis for age stratification in
+the included studies consistently showed stronger antibody responses for
+60-year-olds or older for morning vs afternoon vaccination. Pooled
+results from two randomised controlled trials\textsuperscript{84,106}
+for influenza vaccination showed a statistically significant
+small-to-medium standardised mean difference (SMD) in antibody titers
+for adults aged 65 and older (effect size; SMD = 0.32, 95\% CI =
+0.21--0.43), with morning vaccination consistently yielding higher
+titers 1 month post-vaccination. However, Vink \emph{et
+al.}\textsuperscript{104} caution over-interpretation of this reported
+effect size due to the limited number of randomised controlled trials
+used in the meta-analysis.
+
+\section{Discussion}\label{discussion}
+
+The role of circadian rhythms in many diverse strands of modern society
+are increasingly apparent, in areas such as health and well-being - from
+increasing understanding of chronic clock disruption (e.g., shift work,
+social jet lag) through to optimal living -- the integration of personal
+circadian rhythms into daily schedules for eating, exercising, and
+sleeping to maximise health and performance, increasingly regarded as a
+`game changer' in elite sports regimes\textsuperscript{24}. Another
+example, in agriculture -- harnessing knowledge of crop clocks to
+increase yields and resilience, more and more topical with the gathering
+storm of climate change and food security
+challenges\textsuperscript{28}. Both examples under the cloak of
+cultural disconnect from natural cycles of light and dark and the
+insidious creep of artificial light, including blue light at
+inappropriate phases of our day. Modern lifestyles embolden living
+against our natural clock settings, yet decades of fundamental
+scientific research in biological clockwork, rewarded with the 2017
+Nobel prize in Physiology or Medicine\footnote{Nobel Foundation, The
+  Nobel Prize in Physiology or Medicine 2017 - Press Release
+  \url{https://www.nobelprize.org/prizes/medicine/2017/summary/}}, are
+offering opportunities to harness aspects of clock function as
+chronotherapies. One such therapy -- chronovaccination - might offer an
+extra edge in vaccine effectiveness. However, is the current evidence
+strong enough to support the idea that it can be a low-cost, low-risk
+strategy for boosting vaccine effectiveness? The case for
+chronovaccination -- surveyed in systematic
+reviews\textsuperscript{2,104} -- is somewhat patchy. While the
+influence of TODV is compelling in animal studies where environmental
+conditions are strictly controlled\textsuperscript{76,80}, human
+populations feature a panoply of individual clock types set in a
+multitude of environments. Young clocks, teenage clocks, old clocks,
+with their spectrum of lark and owl clock `settings'. Clocks in rural
+and modern industrial environments, seasonal clocks, socially jetlagged
+clocks - all muddling interpretation of human circadian studies
+assessing the effect of TODV. Large population cohort epidemiological
+studies have been successful in teasing apart relationships between our
+endogenous clock function and the environment -- for example revealing
+the association between where we live in a Time Zone and
+chrono-disruption\textsuperscript{13}. Population-level approaches have
+also been used in chronovacination studies\textsuperscript{102,103}, but
+report modest effect sizes and suffer from potential biases due to
+non-randomisation of cohorts. Vink \emph{et al.}\textsuperscript{104}
+demonstrated that the strongest evidence for diurnal variation in
+vaccination effectiveness was found for influenza vaccines using
+randomised control trials and Wyse \emph{et al.}\textsuperscript{2}
+argue that large population randomised trials are the ideal, with the
+power of thousands of participants enabling adjustment for multiple
+demographic and lifestyle factors that might otherwise confound
+detection of an effect of TODV. These would be costly enterprises, but
+Wyse \emph{et al.}\textsuperscript{2} reason that the onus of
+determining whether effectiveness is a function of the TODV should fall
+to the vaccine producers during clinical trials.
+
+Even if there was a compelling advantage of TODV, would it be readily
+integrated into vaccination programmes? One only has to look at the
+debate around Daylight Saving Time (DST)\textsuperscript{115} to
+understand the sensitive nature of policies that have disruptive effects
+on social routines. Another relevant example is the idea of later school
+start times for adolescents -- designed to align better with their clock
+driven `owl' behaviours -- that illustrates how interventions, however
+well intended, can shift the problem onto other groups of individuals,
+in this case later scheduling working against teachers and parents own
+chronotypes and social schedules. Would the potential benefit of TODV
+justify its disruption to well-established vaccination programming? On
+the one hand boosted vaccine effectiveness can help improve vaccine
+hesitancy, with hesitancy identified by the WHO as one of the 10 threats
+to global health\footnote{Understanding the Behavioural and Social
+  Drivers of Vaccine Uptake, World Health Organization (2022)
+  \url{https://www.who.int/publications/i/item/who-wer9720-209-224}}. On
+the other hand, the convenience of accessing vaccinations is an
+important factor for vaccine uptake\textsuperscript{2}, and programs
+scheduled across much of the day offer individual choice and convenience
+that may be expected in a 24-7 society. Conceivably immunisation
+initiatives more narrowly aligned to an optimum TODV may be detrimental
+to vaccine uptake, although nudging based interventions have shown
+potential in bolstering intention to vaccinate\textsuperscript{116}, and
+may therefore be a useful strategy for fostering confidence in
+time-of-day vaccinations.
+
+While the benefits of TODV across whole populations remains marginal, a
+clearer case can be made for chronovaccination in adults 60 years and
+older, where morning vaccination was more
+beneficial\textsuperscript{104}. It has been speculated that
+immunosenescence - the gradual age-related decline in both innate and
+adaptive immune function - may play a role\textsuperscript{106,117}.
+Similarly, immunosuppressed individuals might benefit from TODV-mediated
+boosted vaccine effectiveness\textsuperscript{113,114}, suggesting that
+TODV may find a role in targeted age group and co-morbidity cohorts. The
+potential of infant chronovaccination is largely an unexplored area,
+with most studies focussed on adult COVID-19 and influenza programmes. A
+recent study, however, examined diurnal patterns of varicella vaccine
+effectiveness in children - finding that immunisation during the late
+morning to early afternoon led to fewer breakthrough infections compared
+with those vaccinated in the evening\textsuperscript{103}. And what of
+urban-rurality? How might `Place' - the extent of coupling to `sun time'
+- influence sensitivity to TODV? This and the influence of seasonality,
+for example, on TODV are largely unexplored and might contribute to
+understanding the complex relationship between the environment, clocks,
+and immune function. Although a discussion of the role of sleep in
+immune function, and therefore its contribution chronovaccination, is
+not developed in this review, Livieratos \emph{et
+al.}\textsuperscript{118} have reviewed the evidence of the impact of
+circadian and sleep factors on influenza vaccine-induced immune
+responses, emphasising that yet another variable -- sleep duration --
+should be considered for understanding vaccine-induced antibody
+responses.
+
+It was hoped that the award of the clock biology Nobel Prize in 2017
+would emphasise the time-of-day reporting in biology and medicine.
+However, Nelson \emph{et al.}\textsuperscript{37} report that the
+time-of-day variable remains largely ignored. Much commentary on the
+future direction of chronovaccination emphasise the importance of
+systematically recording the time-of-day at which vaccines are
+administered, yet to many chronobiologists it remains a puzzle why such
+a fundamental biological variable is regularly overlooked in the first
+place. One factor may be the increased resources and costs that
+accompany properly designed multi time-point circadian assays; however
+circadian biologists would no doubt argue that biological studies cannot
+be reliably replicated -- a fundamental tenet of science -- unless
+time-of-day is recorded. Another important consideration is that
+internal biological time (circadian phase) can vary considerably, the
+consequence of modern lifestyles and the high chance of desynchrony due
+to many of the Person, Place and Time factors described here
+(Table~\ref{tbl-variables}). For example, nurses' circadian rhythms in
+body temperature have been shown to be significantly misaligned due to
+shift working patterns, causing work and sleep schedules to be out of
+phase with each other\textsuperscript{119}. Both external time of
+vaccination and internal (biological) time recording are therefore
+important factors, with internal time recording representing a
+particular technical challenge\textsuperscript{53}. However, research on
+circadian wearable devices that continuously track body movement, heart
+rate, temperature, and light exposure has increased significantly over
+the past decade, are continually improving and offer a non-invasive
+method to capturing real-life circadian rhythms\textsuperscript{26}.
+
+`Time will tell' if chronovaccination finds a role in delivering an edge
+to vaccine effectiveness. There remain many challenges, not only in
+establishing clear clinical benefits, but other hurdles akin to
+practical and societal issues. The general public's growing interest of
+the role of circadian rhythms in relation to health and well-being, or
+`circadian hygiene', might ultimately drive individual awareness of
+optimal times for vaccination. Therefore, as Vink \emph{et
+al.}\textsuperscript{104} allude to in their review, the future vaccine
+customer may well regard optimal vaccination as an hourly continuous
+variable in relation to their personal circadian phase rather than the
+more blunt binary (morning \emph{vs} afternoon) variable we currently
+consider.
+
+\section{Conclusions}\label{conclusions}
+
+Chronovaccination studies have been demonstrably hampered by the panoply
+of confounding factors inherent to population structures and our modern
+lifestyles. Understanding endogenous human biological time-keeping in
+the context of their exogenous settings is likely key to disentangling
+the relative influences of covariates. Nonetheless, TODV as a
+chronotherapy shows promise for older age and immunosuppressed groups,
+and while the effect size may prove to be modest, their practical
+significance could be viewed as a marginal gain in vaccine
+effectiveness, in the same way that knowledge of clockwork is harnessed
+as a competitive advantage in numerous other areas of society. Key
+hurdles in the adoption of chronovaccination are whether society buys
+into the idea and whether health agencies conclude that the fragility of
+vaccine uptake might ultimately be further jeopardised by changes to
+well established vaccination programmes.
+
+\section{Acknowlegements}\label{acknowlegements}
+
+I recognise that the scope of this review, due to space restrictions,
+prevents the citation of every relevant publication. I apologise for any
+omissions of important work in this topic area.
+
+\section{References}\label{references}
+
+\phantomsection\label{refs}
+\begin{CSLReferences}{0}{0}
+\vspace{1em}
+
+\bibitem[\citeproctext]{ref-RN929}
+\CSLLeftMargin{1. }%
+\CSLRightInline{Otasowie, C. O., Tanner, R., Ray, D. W., Austyn, J. M.
+\& Coventry, B. J.
+\href{https://doi.org/10.3389/fimmu.2022.977525}{Chronovaccination:
+Harnessing circadian rhythms to optimize immunisation strategies}.
+\emph{Front Immunol} \textbf{13}, 977525 (2022).}
+
+\bibitem[\citeproctext]{ref-RN928}
+\CSLLeftMargin{2. }%
+\CSLRightInline{Wyse, C. A. \emph{et al.}
+\href{https://doi.org/10.1177/07487304241232447}{Circadian variation in
+the response to vaccination: A systematic review and evidence
+appraisal}. \emph{J Biol Rhythms} \textbf{39}, 219--236 (2024).}
+
+\bibitem[\citeproctext]{ref-RN969}
+\CSLLeftMargin{3. }%
+\CSLRightInline{Stratmann, M. \& Schibler, U.
+\href{https://doi.org/10.1177/0748730406293889}{Properties, entrainment,
+and physiological functions of mammalian peripheral oscillators}.
+\emph{J Biol Rhythms} \textbf{21}, 494--506 (2006).}
+
+\bibitem[\citeproctext]{ref-RN970}
+\CSLLeftMargin{4. }%
+\CSLRightInline{Mohawk, J. A., Green, C. B. \& Takahashi, J. S.
+\href{https://doi.org/10.1146/annurev-neuro-060909-153128}{Central and
+peripheral circadian clocks in mammals}. \emph{Annu Rev Neurosci}
+\textbf{35}, 445--62 (2012).}
+
+\bibitem[\citeproctext]{ref-RN971}
+\CSLLeftMargin{5. }%
+\CSLRightInline{Bass, J. \& Takahashi, J. S.
+\href{https://doi.org/10.1126/science.1195027}{Circadian integration of
+metabolism and energetics}. \emph{Science} \textbf{330}, 1349--54
+(2010).}
+
+\bibitem[\citeproctext]{ref-RN968}
+\CSLLeftMargin{6. }%
+\CSLRightInline{Scheiermann, C., Kunisaki, Y. \& Frenette, P. S.
+\href{https://doi.org/10.1038/nri3386}{Circadian control of the immune
+system}. \emph{Nat Rev Immunol} \textbf{13}, 190--8 (2013).}
+
+\bibitem[\citeproctext]{ref-RN967}
+\CSLLeftMargin{7. }%
+\CSLRightInline{Curtis, A. M., Bellet, M. M., Sassone-Corsi, P. \&
+O'Neill, L. A.
+\href{https://doi.org/10.1016/j.immuni.2014.02.002}{Circadian clock
+proteins and immunity}. \emph{Immunity} \textbf{40}, 178--86 (2014).}
+
+\bibitem[\citeproctext]{ref-RN930}
+\CSLLeftMargin{8. }%
+\CSLRightInline{Labrecque, N. \& Cermakian, N.
+\href{https://doi.org/10.1177/0748730415577723}{Circadian clocks in the
+immune system}. \emph{J Biol Rhythms} \textbf{30}, 277--90 (2015).}
+
+\bibitem[\citeproctext]{ref-RN931}
+\CSLLeftMargin{9. }%
+\CSLRightInline{Scheiermann, C., Gibbs, J., Ince, L. \& Loudon, A.
+\href{https://doi.org/10.1038/s41577-018-0008-4}{Clocking in to
+immunity}. \emph{Nat Rev Immunol} \textbf{18}, 423--437 (2018).}
+
+\bibitem[\citeproctext]{ref-RN932}
+\CSLLeftMargin{10. }%
+\CSLRightInline{Schwartz, W. J. \& Klerman, E. B.
+\href{https://doi.org/10.1016/j.ncl.2019.03.001}{Circadian neurobiology
+and the physiologic regulation of sleep and wakefulness}. \emph{Neurol
+Clin} \textbf{37}, 475--486 (2019).}
+
+\bibitem[\citeproctext]{ref-RN933}
+\CSLLeftMargin{11. }%
+\CSLRightInline{Merrow, M., Spoelstra, K. \& Roenneberg, T.
+\href{https://doi.org/10.1038/sj.embor.7400541}{The circadian cycle:
+Daily rhythms from behaviour to genes}. \emph{EMBO Rep} \textbf{6},
+930--5 (2005).}
+
+\bibitem[\citeproctext]{ref-RN1022}
+\CSLLeftMargin{12. }%
+\CSLRightInline{Bautista, J., Ojeda-Mosquera, S., Ordonez-Lozada, D. \&
+Lopez-Cortes, A.
+\href{https://doi.org/10.3389/fendo.2025.1606242}{Peripheral clocks and
+systemic zeitgeber interactions: From molecular mechanisms to circadian
+precision medicine}. \emph{Front Endocrinol (Lausanne)} \textbf{16},
+1606242 (2025).}
+
+\bibitem[\citeproctext]{ref-RN1021}
+\CSLLeftMargin{13. }%
+\CSLRightInline{Roenneberg, T., Kumar, C. J. \& Merrow, M.
+\href{https://doi.org/10.1016/j.cub.2006.12.011}{The human circadian
+clock entrains to sun time}. \emph{Curr Biol} \textbf{17}, R44--5
+(2007).}
+
+\bibitem[\citeproctext]{ref-RN934}
+\CSLLeftMargin{14. }%
+\CSLRightInline{Wittmann, M., Dinich, J., Merrow, M. \& Roenneberg, T.
+\href{https://doi.org/10.1080/07420520500545979}{Social jetlag:
+Misalignment of biological and social time}. \emph{Chronobiol Int}
+\textbf{23}, 497--509 (2006).}
+
+\bibitem[\citeproctext]{ref-RN935}
+\CSLLeftMargin{15. }%
+\CSLRightInline{Tyler, J. \emph{et al.}
+\href{https://doi.org/10.1038/s41598-021-94459-z}{Genomic heterogeneity
+affects the response to daylight saving time}. \emph{Sci Rep}
+\textbf{11}, 14792 (2021).}
+
+\bibitem[\citeproctext]{ref-RN936}
+\CSLLeftMargin{16. }%
+\CSLRightInline{Yamazaki, S. \emph{et al.}
+\href{https://doi.org/10.1126/science.288.5466.682}{Resetting central
+and peripheral circadian oscillators in transgenic rats}. \emph{Science}
+\textbf{288}, 682--5 (2000).}
+
+\bibitem[\citeproctext]{ref-RN937}
+\CSLLeftMargin{17. }%
+\CSLRightInline{Fishbein, A. B., Knutson, K. L. \& Zee, P. C.
+\href{https://doi.org/10.1172/JCI148286}{Circadian disruption and human
+health}. \emph{J Clin Invest} \textbf{131}, (2021).}
+
+\bibitem[\citeproctext]{ref-RN458}
+\CSLLeftMargin{18. }%
+\CSLRightInline{Roenneberg, T. \& Merrow, M.
+\href{https://doi.org/10.1016/j.cub.2016.04.011}{The circadian clock and
+human health}. \emph{Curr Biol} \textbf{26}, R432--43 (2016).}
+
+\bibitem[\citeproctext]{ref-RN941}
+\CSLLeftMargin{19. }%
+\CSLRightInline{Pittendrigh, C. S.
+\href{https://doi.org/10.1146/annurev.ph.55.030193.000313}{Temporal
+organization: Reflections of a darwinian clock-watcher}. \emph{Annu Rev
+Physiol} \textbf{55}, 16--54 (1993).}
+
+\bibitem[\citeproctext]{ref-RN942}
+\CSLLeftMargin{20. }%
+\CSLRightInline{Edgar, R. S. \emph{et al.}
+\href{https://doi.org/10.1038/nature11088}{Peroxiredoxins are conserved
+markers of circadian rhythms}. \emph{Nature} \textbf{485}, 459--64
+(2012).}
+
+\bibitem[\citeproctext]{ref-RN293}
+\CSLLeftMargin{21. }%
+\CSLRightInline{Dodd, A. N. \emph{et al.}
+\href{https://doi.org/10.1126/science.1115581}{Plant circadian clocks
+increase photosynthesis, growth, survival, and competitive advantage}.
+\emph{Science} \textbf{309}, 630--3 (2005).}
+
+\bibitem[\citeproctext]{ref-RN124}
+\CSLLeftMargin{22. }%
+\CSLRightInline{Harmer, S. L. \emph{et al.}
+\href{http://www.ncbi.nlm.nih.gov/pubmed/11118138}{Orchestrated
+transcription of key pathways in arabidopsis by the circadian clock}.
+\emph{Science} \textbf{290}, 2110--3 (2000).}
+
+\bibitem[\citeproctext]{ref-RN1055}
+\CSLLeftMargin{23. }%
+\CSLRightInline{Chavan, R. \emph{et al.}
+\href{https://doi.org/10.1038/ncomms10580}{Liver-derived ketone bodies
+are necessary for food anticipation}. \emph{Nat Commun} \textbf{7},
+10580 (2016).}
+
+\bibitem[\citeproctext]{ref-RN1047}
+\CSLLeftMargin{24. }%
+\CSLRightInline{Augsburger, G. R., Sobolewski, E. J., Escalante, G. \&
+Graybeal, A. J.
+\href{https://doi.org/10.3390/clockssleep7020018}{Circadian regulation
+for optimizing sport and exercise performance}. \emph{Clocks Sleep}
+\textbf{7}, (2025).}
+
+\bibitem[\citeproctext]{ref-RN1057}
+\CSLLeftMargin{25. }%
+\CSLRightInline{Dose, B., Yalcin, M., Dries, S. P. M. \& Relogio, A.
+\href{https://doi.org/10.3389/fdgth.2023.1157654}{TimeTeller for timing
+health: The potential of circadian medicine to improve performance,
+prevent disease and optimize treatment}. \emph{Front Digit Health}
+\textbf{5}, 1157654 (2023).}
+
+\bibitem[\citeproctext]{ref-RN1054}
+\CSLLeftMargin{26. }%
+\CSLRightInline{Lee, E.
+\href{https://doi.org/10.33069/cim.2025.0011}{Wearable technology in
+circadian rhythm research: From monitoring to clinical insights}.
+\emph{Chronobiol Med} \textbf{7}, 3--8 (2025).}
+
+\bibitem[\citeproctext]{ref-RN910}
+\CSLLeftMargin{27. }%
+\CSLRightInline{Paajanen, P., Kimmey, J. M. \& Dodd, A. N.
+\href{https://doi.org/10.1098/rstb.2023.0346}{Circadian gating:
+Concepts, processes, and opportunities}. \emph{Philos Trans R Soc Lond B
+Biol Sci} \textbf{380}, 20230346 (2025).}
+
+\bibitem[\citeproctext]{ref-RN911}
+\CSLLeftMargin{28. }%
+\CSLRightInline{Belbin, F. E. \emph{et al.}
+\href{https://doi.org/10.1038/s41467-019-11709-5}{Plant circadian
+rhythms regulate the effectiveness of a glyphosate-based herbicide}.
+\emph{Nat Commun} \textbf{10}, 3704 (2019).}
+
+\bibitem[\citeproctext]{ref-RN915}
+\CSLLeftMargin{29. }%
+\CSLRightInline{Owolabi, A. T. Y., Reece, S. E. \& Schneider, P.
+\href{https://doi.org/10.1093/emph/eoab013}{Daily rhythms of both host
+and parasite affect antimalarial drug efficacy}. \emph{Evol Med Public
+Health} \textbf{9}, 208--219 (2021).}
+
+\bibitem[\citeproctext]{ref-RN912}
+\CSLLeftMargin{30. }%
+\CSLRightInline{Zhang, R., Lahens, N. F., Ballance, H. I., Hughes, M. E.
+\& Hogenesch, J. B. \href{https://doi.org/10.1073/pnas.1408886111}{A
+circadian gene expression atlas in mammals: Implications for biology and
+medicine}. \emph{Proc Natl Acad Sci U S A} \textbf{111}, 16219--24
+(2014).}
+
+\bibitem[\citeproctext]{ref-RN913}
+\CSLLeftMargin{31. }%
+\CSLRightInline{Sulli, G., Manoogian, E. N. C., Taub, P. R. \& Panda, S.
+\href{https://doi.org/10.1016/j.tips.2018.07.003}{Training the circadian
+clock, clocking the drugs, and drugging the clock to prevent, manage,
+and treat chronic diseases}. \emph{Trends Pharmacol Sci} \textbf{39},
+812--827 (2018).}
+
+\bibitem[\citeproctext]{ref-RN921}
+\CSLLeftMargin{32. }%
+\CSLRightInline{El-Tanani, M. \emph{et al.}
+\href{https://doi.org/10.1007/s12672-024-01643-4}{Circadian rhythms and
+cancer: Implications for timing in therapy}. \emph{Discov Oncol}
+\textbf{15}, 767 (2024).}
+
+\bibitem[\citeproctext]{ref-RN916}
+\CSLLeftMargin{33. }%
+\CSLRightInline{Schachter, M.
+\href{https://doi.org/10.1111/j.1472-8206.2004.00299.x}{Chemical,
+pharmacokinetic and pharmacodynamic properties of statins: An update}.
+\emph{Fundam Clin Pharmacol} \textbf{19}, 117--25 (2005).}
+
+\bibitem[\citeproctext]{ref-RN920}
+\CSLLeftMargin{34. }%
+\CSLRightInline{Smolensky, M. H. \emph{et al.}
+\href{https://doi.org/10.1016/j.smrv.2014.06.005}{Diurnal and
+twenty-four hour patterning of human diseases: Acute and chronic common
+and uncommon medical conditions}. \emph{Sleep Med Rev} \textbf{21},
+12--22 (2015).}
+
+\bibitem[\citeproctext]{ref-RN922}
+\CSLLeftMargin{35. }%
+\CSLRightInline{Walton, J. C. \emph{et al.}
+\href{https://doi.org/10.1002/cpt.2073}{Circadian variation in efficacy
+of medications}. \emph{Clin Pharmacol Ther} \textbf{109}, 1457--1488
+(2021).}
+
+\bibitem[\citeproctext]{ref-RN919}
+\CSLLeftMargin{36. }%
+\CSLRightInline{Nelson, R. J., Bumgarner, J. R., Walker, 2nd., W. H. \&
+DeVries, A. C.
+\href{https://doi.org/10.1016/j.neubiorev.2021.05.017}{Time-of-day as a
+critical biological variable}. \emph{Neurosci Biobehav Rev}
+\textbf{127}, 740--746 (2021).}
+
+\bibitem[\citeproctext]{ref-RN917}
+\CSLLeftMargin{37. }%
+\CSLRightInline{Nelson, R. J., DeVries, A. C. \& Prendergast, B. J.
+\href{https://doi.org/10.1073/pnas.2316959121}{Researchers need to
+better address time-of-day as a critical biological variable}.
+\emph{Proc Natl Acad Sci U S A} \textbf{121}, e2316959121 (2024).}
+
+\bibitem[\citeproctext]{ref-RN923}
+\CSLLeftMargin{38. }%
+\CSLRightInline{Ruben, M. D., Smith, D. F., FitzGerald, G. A. \&
+Hogenesch, J. B. \href{https://doi.org/10.1126/science.aax7621}{Dosing
+time matters}. \emph{Science} \textbf{365}, 547--549 (2019).}
+
+\bibitem[\citeproctext]{ref-RN924}
+\CSLLeftMargin{39. }%
+\CSLRightInline{Cederroth, C. R. \emph{et al.}
+\href{https://doi.org/10.1016/j.cmet.2019.06.019}{Medicine in the fourth
+dimension}. \emph{Cell Metab} \textbf{30}, 238--250 (2019).}
+
+\bibitem[\citeproctext]{ref-RN980}
+\CSLLeftMargin{40. }%
+\CSLRightInline{Gray, K. J. \& Gibbs, J. E.
+\href{https://doi.org/10.1007/s00281-022-00919-7}{Adaptive immunity,
+chronic inflammation and the clock}. \emph{Semin Immunopathol}
+\textbf{44}, 209--224 (2022).}
+
+\bibitem[\citeproctext]{ref-RN982}
+\CSLLeftMargin{41. }%
+\CSLRightInline{Pollard, A. J. \& Bijker, E. M.
+\href{https://doi.org/10.1038/s41577-020-00479-7}{A guide to
+vaccinology: From basic principles to new developments}. \emph{Nat Rev
+Immunol} \textbf{21}, 83--100 (2021).}
+
+\bibitem[\citeproctext]{ref-RN983}
+\CSLLeftMargin{42. }%
+\CSLRightInline{Born, J., Lange, T., Hansen, K., Molle, M. \& Fehm, H.
+L. \href{https://www.ncbi.nlm.nih.gov/pubmed/9127011}{Effects of sleep
+and circadian rhythm on human circulating immune cells}. \emph{J
+Immunol} \textbf{158}, 4454--64 (1997).}
+
+\bibitem[\citeproctext]{ref-RN984}
+\CSLLeftMargin{43. }%
+\CSLRightInline{Pick, R., He, W., Chen, C. S. \& Scheiermann, C.
+\href{https://doi.org/10.1016/j.it.2019.03.010}{Time-of-day-dependent
+trafficking and function of leukocyte subsets}. \emph{Trends Immunol}
+\textbf{40}, 524--537 (2019).}
+
+\bibitem[\citeproctext]{ref-RN985}
+\CSLLeftMargin{44. }%
+\CSLRightInline{Wang, C., Lutes, L. K., Barnoud, C. \& Scheiermann, C.
+\href{https://doi.org/10.1126/sciimmunol.abm2465}{The circadian immune
+system}. \emph{Sci Immunol} \textbf{7}, eabm2465 (2022).}
+
+\bibitem[\citeproctext]{ref-RN966}
+\CSLLeftMargin{45. }%
+\CSLRightInline{Man, K., Loudon, A. \& Chawla, A.
+\href{https://doi.org/10.1126/science.aah4966}{Immunity around the
+clock}. \emph{Science} \textbf{354}, 999--1003 (2016).}
+
+\bibitem[\citeproctext]{ref-RN943}
+\CSLLeftMargin{46. }%
+\CSLRightInline{Bass, J. \& Lazar, M. A.
+\href{https://doi.org/10.1126/science.aah4965}{Circadian time signatures
+of fitness and disease}. \emph{Science} \textbf{354}, 994--999 (2016).}
+
+\bibitem[\citeproctext]{ref-RN944}
+\CSLLeftMargin{47. }%
+\CSLRightInline{Early, J. O. \& Curtis, A. M.
+\href{https://doi.org/10.1016/j.smim.2016.10.006}{Immunometabolism: Is
+it under the eye of the clock?} \emph{Semin Immunol} \textbf{28},
+478--490 (2016).}
+
+\bibitem[\citeproctext]{ref-RN945}
+\CSLLeftMargin{48. }%
+\CSLRightInline{Li, W. Q., Qureshi, A. A., Schernhammer, E. S. \& Han,
+J. \href{https://doi.org/10.1038/jid.2012.285}{Rotating night-shift work
+and risk of psoriasis in US women}. \emph{J Invest Dermatol}
+\textbf{133}, 565--7 (2013).}
+
+\bibitem[\citeproctext]{ref-RN946}
+\CSLLeftMargin{49. }%
+\CSLRightInline{Nojkov, B., Rubenstein, J. H., Chey, W. D. \&
+Hoogerwerf, W. A. \href{https://doi.org/10.1038/ajg.2010.48}{The impact
+of rotating shift work on the prevalence of irritable bowel syndrome in
+nurses}. \emph{Am J Gastroenterol} \textbf{105}, 842--7 (2010).}
+
+\bibitem[\citeproctext]{ref-RN947}
+\CSLLeftMargin{50. }%
+\CSLRightInline{Durrington, H. J., Farrow, S. N., Loudon, A. S. \& Ray,
+D. W. \href{https://doi.org/10.1136/thoraxjnl-2013-203482}{The circadian
+clock and asthma}. \emph{Thorax} \textbf{69}, 90--2 (2014).}
+
+\bibitem[\citeproctext]{ref-RN948}
+\CSLLeftMargin{51. }%
+\CSLRightInline{Olsen, N. J., Brooks, R. H. \& Furst, D.
+\href{https://www.ncbi.nlm.nih.gov/pubmed/8350328}{Variability of
+immunologic and clinical features in patients with rheumatoid arthritis
+studied over 24 hours}. \emph{J Rheumatol} \textbf{20}, 940--3 (1993).}
+
+\bibitem[\citeproctext]{ref-RN1011}
+\CSLLeftMargin{52. }%
+\CSLRightInline{Faraut, B. \emph{et al.}
+\href{https://doi.org/10.3389/fimmu.2022.939829}{Immune disruptions and
+night shift work in hospital healthcare professionals: The intricate
+effects of social jet-lag and sleep debt}. \emph{Front Immunol}
+\textbf{13}, 939829 (2022).}
+
+\bibitem[\citeproctext]{ref-RN1012}
+\CSLLeftMargin{53. }%
+\CSLRightInline{Haspel, J. A. \emph{et al.}
+\href{https://doi.org/10.1172/jci.insight.131487}{Perfect timing:
+Circadian rhythms, sleep, and immunity - an NIH workshop summary}.
+\emph{JCI Insight} \textbf{5}, (2020).}
+
+\bibitem[\citeproctext]{ref-RN938}
+\CSLLeftMargin{54. }%
+\CSLRightInline{Kalmbach, D. A. \emph{et al.}
+\href{https://doi.org/10.1093/sleep/zsw048}{Genetic basis of chronotype
+in humans: Insights from three landmark GWAS}. \emph{Sleep} \textbf{40},
+(2017).}
+
+\bibitem[\citeproctext]{ref-RN939}
+\CSLLeftMargin{55. }%
+\CSLRightInline{Roenneberg, T. \emph{et al.}
+\href{https://doi.org/10.1016/j.smrv.2007.07.005}{Epidemiology of the
+human circadian clock}. \emph{Sleep Med Rev} \textbf{11}, 429--38
+(2007).}
+
+\bibitem[\citeproctext]{ref-RN940}
+\CSLLeftMargin{56. }%
+\CSLRightInline{Walch, O. J., Cochran, A. \& Forger, D. B.
+\href{https://doi.org/10.1126/sciadv.1501705}{A global quantification of
+"normal" sleep schedules using smartphone data}. \emph{Sci Adv}
+\textbf{2}, e1501705 (2016).}
+
+\bibitem[\citeproctext]{ref-RN1018}
+\CSLLeftMargin{57. }%
+\CSLRightInline{Hulsegge, G. \emph{et al.}
+\href{https://doi.org/10.1093/eurpub/cky092}{Shift work, chronotype and
+the risk of cardiometabolic risk factors}. \emph{Eur J Public Health}
+\textbf{29}, 128--134 (2019).}
+
+\bibitem[\citeproctext]{ref-RN1019}
+\CSLLeftMargin{58. }%
+\CSLRightInline{Walsh, N. A., Repa, L. M. \& Garland, S. N.
+\href{https://doi.org/10.1111/jsr.13442}{Mindful larks and lonely owls:
+The relationship between chronotype, mental health, sleep quality, and
+social support in young adults}. \emph{J Sleep Res} \textbf{31}, e13442
+(2022).}
+
+\bibitem[\citeproctext]{ref-RN1017}
+\CSLLeftMargin{59. }%
+\CSLRightInline{Butler, T. D., Mohammed Ali, A., Gibbs, J. E. \&
+McLaughlin, J. T.
+\href{https://doi.org/10.1177/07487304221131114}{Chronotype in patients
+with immune-mediated inflammatory disease: A systematic review}. \emph{J
+Biol Rhythms} \textbf{38}, 34--43 (2023).}
+
+\bibitem[\citeproctext]{ref-RN1059}
+\CSLLeftMargin{60. }%
+\CSLRightInline{Fink, A. L. \& Klein, S. L.
+\href{https://doi.org/10.1016/j.cophys.2018.03.010}{The evolution of
+greater humoral immunity in females than males: Implications for vaccine
+efficacy}. \emph{Curr Opin Physiol} \textbf{6}, 16--20 (2018).}
+
+\bibitem[\citeproctext]{ref-RN1060}
+\CSLLeftMargin{61. }%
+\CSLRightInline{Flanagan, K. L., Fink, A. L., Plebanski, M. \& Klein, S.
+L. \href{https://doi.org/10.1146/annurev-cellbio-100616-060718}{Sex and
+gender differences in the outcomes of vaccination over the life course}.
+\emph{Annu Rev Cell Dev Biol} \textbf{33}, 577--599 (2017).}
+
+\bibitem[\citeproctext]{ref-RN1061}
+\CSLLeftMargin{62. }%
+\CSLRightInline{Bailey, M. \& Silver, R.
+\href{https://doi.org/10.1016/j.yfrne.2013.11.003}{Sex differences in
+circadian timing systems: Implications for disease}. \emph{Front
+Neuroendocrinol} \textbf{35}, 111--39 (2014).}
+
+\bibitem[\citeproctext]{ref-RN962}
+\CSLLeftMargin{63. }%
+\CSLRightInline{Kantermann, T., Juda, M., Merrow, M. \& Roenneberg, T.
+\href{https://doi.org/10.1016/j.cub.2007.10.025}{The human circadian
+clock's seasonal adjustment is disrupted by daylight saving time}.
+\emph{Curr Biol} \textbf{17}, 1996--2000 (2007).}
+
+\bibitem[\citeproctext]{ref-RN989}
+\CSLLeftMargin{64. }%
+\CSLRightInline{Wyse, C., O'Malley, G., Coogan, A. N., McConkey, S. \&
+Smith, D. J. \href{https://doi.org/10.1016/j.isci.2021.102255}{Seasonal
+and daytime variation in multiple immune parameters in humans: Evidence
+from 329,261 participants of the UK biobank cohort}. \emph{iScience}
+\textbf{24}, 102255 (2021).}
+
+\bibitem[\citeproctext]{ref-RN979}
+\CSLLeftMargin{65. }%
+\CSLRightInline{Tsapakis, E.-M., Fountoulakis, K. N., Kanioura, S. \&
+Einat, H. \href{https://doi.org/10.1016/j.nsa.2024.103940}{Significant
+contribution of chronotype to emotional well-being in chronic
+psychiatric outpatients in greece}. \emph{Neuroscience Applied}
+\textbf{3}, 103940 (2024).}
+
+\bibitem[\citeproctext]{ref-RN1010}
+\CSLLeftMargin{66. }%
+\CSLRightInline{Martinez-Lozano, N. \emph{et al.}
+\href{https://doi.org/10.1038/s41598-020-73297-5}{Evening types have
+social jet lag and metabolic alterations in school-age children}.
+\emph{Sci Rep} \textbf{10}, 16747 (2020).}
+
+\bibitem[\citeproctext]{ref-RN964}
+\CSLLeftMargin{67. }%
+\CSLRightInline{Papatsimpa, C., Schlangen, L. J. M., Smolders, K.,
+Linnartz, J. M. G. \& Kort, Y. A. W. de.
+\href{https://doi.org/10.1038/s41598-021-92863-z}{The interindividual
+variability of sleep timing and circadian phase in humans is influenced
+by daytime and evening light conditions}. \emph{Sci Rep} \textbf{11},
+13709 (2021).}
+
+\bibitem[\citeproctext]{ref-RN978}
+\CSLLeftMargin{68. }%
+\CSLRightInline{Blume, C., Garbazza, C. \& Spitschan, M.
+\href{https://doi.org/10.1007/s11818-019-00215-x}{Effects of light on
+human circadian rhythms, sleep and mood}. \emph{Somnologie (Berl)}
+\textbf{23}, 147--156 (2019).}
+
+\bibitem[\citeproctext]{ref-RN977}
+\CSLLeftMargin{69. }%
+\CSLRightInline{Mendell, M. J. \emph{et al.}
+\href{https://doi.org/10.2105/ajph.92.9.1430}{Improving the health of
+workers in indoor environments: Priority research needs for a national
+occupational research agenda}. \emph{Am J Public Health} \textbf{92},
+1430--40 (2002).}
+
+\bibitem[\citeproctext]{ref-RN973}
+\CSLLeftMargin{70. }%
+\CSLRightInline{Smith, M. \href{https://doi.org/10.1038/457027a}{Time to
+turn off the lights}. \emph{Nature} \textbf{457}, 27 (2009).}
+
+\bibitem[\citeproctext]{ref-RN1026}
+\CSLLeftMargin{71. }%
+\CSLRightInline{Taylor, S. R.
+\href{https://doi.org/10.1177/0748730421990482}{Delays are
+self-enhancing: An explanation of the east-west asymmetry in recovery
+from jetlag}. \emph{J Biol Rhythms} \textbf{36}, 127--136 (2021).}
+
+\bibitem[\citeproctext]{ref-RN1027}
+\CSLLeftMargin{72. }%
+\CSLRightInline{Gu, F. \emph{et al.}
+\href{https://doi.org/10.1158/1055-9965.EPI-16-1029}{Longitude position
+in a time zone and cancer risk in the united states}. \emph{Cancer
+Epidemiol Biomarkers Prev} \textbf{26}, 1306--1311 (2017).}
+
+\bibitem[\citeproctext]{ref-RN1029}
+\CSLLeftMargin{73. }%
+\CSLRightInline{Roenneberg, T., Winnebeck, E. C. \& Klerman, E. B.
+\href{https://doi.org/10.3389/fphys.2019.00944}{Daylight saving time and
+artificial time zones - a battle between biological and social times}.
+\emph{Front Physiol} \textbf{10}, 944 (2019).}
+
+\bibitem[\citeproctext]{ref-RN1030}
+\CSLLeftMargin{74. }%
+\CSLRightInline{VoPham, T. \emph{et al.}
+\href{https://doi.org/10.1158/1055-9965.EPI-17-1052}{Circadian
+misalignment and hepatocellular carcinoma incidence in the united
+states}. \emph{Cancer Epidemiol Biomarkers Prev} \textbf{27}, 719--727
+(2018).}
+
+\bibitem[\citeproctext]{ref-RN1031}
+\CSLLeftMargin{75. }%
+\CSLRightInline{Giuntella, O. \& Mazzonna, F.
+\href{https://doi.org/10.1016/j.jhealeco.2019.03.007}{Sunset time and
+the economic effects of social jetlag: Evidence from US time zone
+borders}. \emph{J Health Econ} \textbf{65}, 210--226 (2019).}
+
+\bibitem[\citeproctext]{ref-RN988}
+\CSLLeftMargin{76. }%
+\CSLRightInline{Ince, L. M. \emph{et al.}
+\href{https://doi.org/10.1038/s41467-023-35979-2}{Influence of circadian
+clocks on adaptive immunity and vaccination responses}. \emph{Nat
+Commun} \textbf{14}, 476 (2023).}
+
+\bibitem[\citeproctext]{ref-RN990}
+\CSLLeftMargin{77. }%
+\CSLRightInline{Hopwood, T. W. \emph{et al.}
+\href{https://doi.org/10.1038/s41598-018-22021-5}{The circadian
+regulator BMAL1 programmes responses to parasitic worm infection via a
+dendritic cell clock}. \emph{Sci Rep} \textbf{8}, 3782 (2018).}
+
+\bibitem[\citeproctext]{ref-RN991}
+\CSLLeftMargin{78. }%
+\CSLRightInline{Druzd, D. \emph{et al.}
+\href{https://doi.org/10.1016/j.immuni.2016.12.011}{Lymphocyte circadian
+clocks control lymph node trafficking and adaptive immune responses}.
+\emph{Immunity} \textbf{46}, 120--132 (2017).}
+
+\bibitem[\citeproctext]{ref-RN992}
+\CSLLeftMargin{79. }%
+\CSLRightInline{Sutton, C. E. \emph{et al.}
+\href{https://doi.org/10.1038/s41467-017-02111-0}{Loss of the molecular
+clock in myeloid cells exacerbates t cell-mediated CNS autoimmune
+disease}. \emph{Nat Commun} \textbf{8}, 1923 (2017).}
+
+\bibitem[\citeproctext]{ref-RN993}
+\CSLLeftMargin{80. }%
+\CSLRightInline{Nobis, C. C. \emph{et al.}
+\href{https://doi.org/10.1073/pnas.1905080116}{The circadian clock of
+CD8 t cells modulates their early response to vaccination and the
+rhythmicity of related signaling pathways}. \emph{Proc Natl Acad Sci U S
+A} \textbf{116}, 20077--20086 (2019).}
+
+\bibitem[\citeproctext]{ref-RN994}
+\CSLLeftMargin{81. }%
+\CSLRightInline{Bree, L. C. J. de \emph{et al.}
+\href{https://doi.org/10.1172/JCI133934}{Circadian rhythm influences
+induction of trained immunity by BCG vaccination}. \emph{J Clin Invest}
+\textbf{130}, 5603--5617 (2020).}
+
+\bibitem[\citeproctext]{ref-RN995}
+\CSLLeftMargin{82. }%
+\CSLRightInline{Lange, T., Dimitrov, S., Bollinger, T., Diekelmann, S.
+\& Born, J. \href{https://doi.org/10.4049/jimmunol.1100015}{Sleep after
+vaccination boosts immunological memory}. \emph{J Immunol} \textbf{187},
+283--90 (2011).}
+
+\bibitem[\citeproctext]{ref-RN996}
+\CSLLeftMargin{83. }%
+\CSLRightInline{Lange, T., Perras, B., Fehm, H. L. \& Born, J.
+\href{https://doi.org/10.1097/01.psy.0000091382.61178.f1}{Sleep enhances
+the human antibody response to hepatitis a vaccination}. \emph{Psychosom
+Med} \textbf{65}, 831--5 (2003).}
+
+\bibitem[\citeproctext]{ref-RN956}
+\CSLLeftMargin{84. }%
+\CSLRightInline{Long, J. E. \emph{et al.}
+\href{https://doi.org/10.1016/j.vaccine.2016.04.032}{Morning vaccination
+enhances antibody response over afternoon vaccination: A
+cluster-randomised trial}. \emph{Vaccine} \textbf{34}, 2679--85 (2016).}
+
+\bibitem[\citeproctext]{ref-RN999}
+\CSLLeftMargin{85. }%
+\CSLRightInline{Phillips, A. C., Gallagher, S., Carroll, D. \& Drayson,
+M. \href{https://doi.org/10.1111/j.1469-8986.2008.00662.x}{Preliminary
+evidence that morning vaccination is associated with an enhanced
+antibody response in men}. \emph{Psychophysiology} \textbf{45}, 663--6
+(2008).}
+
+\bibitem[\citeproctext]{ref-RN1015}
+\CSLLeftMargin{86. }%
+\CSLRightInline{Hemmers, S. \& Rudensky, A. Y.
+\href{https://doi.org/10.1016/j.celrep.2015.04.058}{The cell-intrinsic
+circadian clock is dispensable for lymphocyte differentiation and
+function}. \emph{Cell Rep} \textbf{11}, 1339--49 (2015).}
+
+\bibitem[\citeproctext]{ref-RN1002}
+\CSLLeftMargin{87. }%
+\CSLRightInline{Thorne, H. C., Jones, K. H., Peters, S. P., Archer, S.
+N. \& Dijk, D. J. \href{https://doi.org/10.1080/07420520903044315}{Daily
+and seasonal variation in the spectral composition of light exposure in
+humans}. \emph{Chronobiol Int} \textbf{26}, 854--66 (2009).}
+
+\bibitem[\citeproctext]{ref-RN1003}
+\CSLLeftMargin{88. }%
+\CSLRightInline{Meyer, C. \emph{et al.}
+\href{https://doi.org/10.1073/pnas.1518129113}{Seasonality in human
+cognitive brain responses}. \emph{Proc Natl Acad Sci U S A}
+\textbf{113}, 3066--71 (2016).}
+
+\bibitem[\citeproctext]{ref-RN1004}
+\CSLLeftMargin{89. }%
+\CSLRightInline{Viola, A. U., James, L. M., Schlangen, L. J. \& Dijk, D.
+J. \href{https://doi.org/10.5271/sjweh.1268}{Blue-enriched white light
+in the workplace improves self-reported alertness, performance and sleep
+quality}. \emph{Scand J Work Environ Health} \textbf{34}, 297--306
+(2008).}
+
+\bibitem[\citeproctext]{ref-RN1005}
+\CSLLeftMargin{90. }%
+\CSLRightInline{Touitou, Y. \& Point, S.
+\href{https://doi.org/10.1016/j.envres.2020.109942}{Effects and
+mechanisms of action of light-emitting diodes on the human retina and
+internal clock}. \emph{Environ Res} \textbf{190}, 109942 (2020).}
+
+\bibitem[\citeproctext]{ref-RN1006}
+\CSLLeftMargin{91. }%
+\CSLRightInline{Zerbini, G., Kantermann, T. \& Merrow, M.
+\href{https://doi.org/10.1111/ejn.14293}{Strategies to decrease social
+jetlag: Reducing evening blue light advances sleep and melatonin}.
+\emph{Eur J Neurosci} \textbf{51}, 2355--2366 (2020).}
+
+\bibitem[\citeproctext]{ref-RN1007}
+\CSLLeftMargin{92. }%
+\CSLRightInline{Rudiger, H. W.
+\href{https://doi.org/10.1007/s00108-004-1257-9}{{[}Health problems due
+to night shift work and jetlag{]}}. \emph{Internist (Berl)} \textbf{45},
+1021--5 (2004).}
+
+\bibitem[\citeproctext]{ref-RN1008}
+\CSLLeftMargin{93. }%
+\CSLRightInline{Levandovski, R. \emph{et al.}
+\href{https://doi.org/10.3109/07420528.2011.602445}{Depression scores
+associate with chronotype and social jetlag in a rural population}.
+\emph{Chronobiol Int} \textbf{28}, 771--8 (2011).}
+
+\bibitem[\citeproctext]{ref-RN1009}
+\CSLLeftMargin{94. }%
+\CSLRightInline{Roenneberg, T., Allebrandt, K. V., Merrow, M. \& Vetter,
+C. \href{https://doi.org/10.1016/j.cub.2012.03.038}{Social jetlag and
+obesity}. \emph{Curr Biol} \textbf{22}, 939--43 (2012).}
+
+\bibitem[\citeproctext]{ref-RN1023}
+\CSLLeftMargin{95. }%
+\CSLRightInline{Emery, P. \& Gachon, F.
+\href{https://doi.org/10.1038/s44323-025-00037-1}{Biological rhythms:
+Living your life, one half-day at a time}. \emph{NPJ Biol Timing Sleep}
+\textbf{2}, 21 (2025).}
+
+\bibitem[\citeproctext]{ref-RN1014}
+\CSLLeftMargin{96. }%
+\CSLRightInline{Raible, F., Takekata, H. \& Tessmar-Raible, K.
+\href{https://doi.org/10.3389/fneur.2017.00189}{An overview of monthly
+rhythms and clocks}. \emph{Front Neurol} \textbf{8}, 189 (2017).}
+
+\bibitem[\citeproctext]{ref-RN1013}
+\CSLLeftMargin{97. }%
+\CSLRightInline{Cajochen, C. \emph{et al.}
+\href{https://doi.org/10.1016/j.cub.2013.06.029}{Evidence that the lunar
+cycle influences human sleep}. \emph{Curr Biol} \textbf{23}, 1485--8
+(2013).}
+
+\bibitem[\citeproctext]{ref-RN1024}
+\CSLLeftMargin{98. }%
+\CSLRightInline{Zhu, B. \emph{et al.}
+\href{https://doi.org/10.1038/s44323-024-00005-1}{Evidence for ~12-h
+ultradian gene programs in humans}. \emph{NPJ Biol Timing Sleep}
+\textbf{1}, 4 (2024).}
+
+\bibitem[\citeproctext]{ref-RN1025}
+\CSLLeftMargin{99. }%
+\CSLRightInline{Pan, Y. \emph{et al.}
+\href{https://doi.org/10.1371/journal.pbio.3000580}{12-h clock
+regulation of genetic information flow by XBP1s}. \emph{PLoS Biol}
+\textbf{18}, e3000580 (2020).}
+
+\bibitem[\citeproctext]{ref-RN957}
+\CSLLeftMargin{100. }%
+\CSLRightInline{Zhang, H. \emph{et al.}
+\href{https://doi.org/10.1038/s41422-021-00541-6}{Time of day influences
+immune response to an inactivated vaccine against SARS-CoV-2}.
+\emph{Cell Res} \textbf{31}, 1215--1217 (2021).}
+
+\bibitem[\citeproctext]{ref-RN1020}
+\CSLLeftMargin{101. }%
+\CSLRightInline{Wang, W. \emph{et al.}
+\href{https://doi.org/10.1177/07487304211059315}{Time of day of
+vaccination affects SARS-CoV-2 antibody responses in an observational
+study of health care workers}. \emph{J Biol Rhythms} \textbf{37},
+124--129 (2022).}
+
+\bibitem[\citeproctext]{ref-RN954}
+\CSLLeftMargin{102. }%
+\CSLRightInline{Hazan, G. \emph{et al.}
+\href{https://doi.org/10.1172/JCI167339}{Biological rhythms in COVID-19
+vaccine effectiveness in an observational cohort study of 1.5 million
+patients}. \emph{J Clin Invest} \textbf{133}, (2023).}
+
+\bibitem[\citeproctext]{ref-RN1045}
+\CSLLeftMargin{103. }%
+\CSLRightInline{Danino, D., Kalron, Y., Haspel, J. A. \& Hazan, G.
+\href{https://doi.org/10.1172/jci.insight.184452}{Diurnal rhythms in
+varicella vaccine effectiveness}. \emph{JCI Insight} \textbf{9},
+(2024).}
+
+\bibitem[\citeproctext]{ref-RN1035}
+\CSLLeftMargin{104. }%
+\CSLRightInline{Vink, K., Kusters, J. \& Wallinga, J.
+\href{https://doi.org/10.3389/fpubh.2025.1516523}{Chrono-optimizing
+vaccine administration: A systematic review and meta-analysis}.
+\emph{Front Public Health} \textbf{13}, 1516523 (2025).}
+
+\bibitem[\citeproctext]{ref-RN1032}
+\CSLLeftMargin{105. }%
+\CSLRightInline{Erber, A. C. \emph{et al.}
+\href{https://doi.org/10.1177/07487304221132355}{The association of time
+of day of ChAdOx1 nCoV-19 vaccine administration with SARS-CoV-2
+anti-spike IgG antibody levels: An exploratory observational study}.
+\emph{J Biol Rhythms} \textbf{38}, 98--108 (2023).}
+
+\bibitem[\citeproctext]{ref-RN1036}
+\CSLLeftMargin{106. }%
+\CSLRightInline{Liu, Y. \emph{et al.}
+\href{https://doi.org/10.1186/s12979-022-00304-w}{The impact of
+circadian rhythms on the immune response to influenza vaccination in
+middle-aged and older adults (IMPROVE): A randomised controlled trial}.
+\emph{Immun Ageing} \textbf{19}, 46 (2022).}
+
+\bibitem[\citeproctext]{ref-RN1037}
+\CSLLeftMargin{107. }%
+\CSLRightInline{Langlois, P. H., Smolensky, M. H., Glezen, W. P. \&
+Keitel, W. A. \href{https://doi.org/10.3109/07420529509064497}{Diurnal
+variation in responses to influenza vaccine}. \emph{Chronobiol Int}
+\textbf{12}, 28--36 (1995).}
+
+\bibitem[\citeproctext]{ref-RN1038}
+\CSLLeftMargin{108. }%
+\CSLRightInline{Kurupati, R. K. \emph{et al.}
+\href{https://doi.org/10.1016/j.vaccine.2017.05.074}{The effect of
+timing of influenza vaccination and sample collection on antibody titers
+and responses in the aged}. \emph{Vaccine} \textbf{35}, 3700--3708
+(2017).}
+
+\bibitem[\citeproctext]{ref-RN1039}
+\CSLLeftMargin{109. }%
+\CSLRightInline{Lai, F. \emph{et al.}
+\href{https://doi.org/10.1002/adbi.202300028}{The impact of vaccination
+time on the antibody response to an inactivated vaccine against
+SARS-CoV-2 (IMPROVE-2): A randomized controlled trial}. \emph{Adv Biol
+(Weinh)} \textbf{7}, e2300028 (2023).}
+
+\bibitem[\citeproctext]{ref-RN1040}
+\CSLLeftMargin{110. }%
+\CSLRightInline{Matryba, P. \emph{et al.}
+\href{https://doi.org/10.3390/vaccines10030443}{The influence of time of
+day of vaccination with BNT162b2 on the adverse drug reactions and
+efficacy of humoral response against SARS-CoV-2 in an observational
+study of young adults}. \emph{Vaccines (Basel)} \textbf{10}, (2022).}
+
+\bibitem[\citeproctext]{ref-RN1041}
+\CSLLeftMargin{111. }%
+\CSLRightInline{Yamanaka, Y., Yokota, I., Yasumoto, A., Morishita, E. \&
+Horiuchi, H. \href{https://doi.org/10.1177/07487304221124661}{Time of
+day of vaccination does not associate with SARS-CoV-2 antibody titer
+following first dose of mRNA COVID-19 vaccine}. \emph{J Biol Rhythms}
+\textbf{37}, 700--706 (2022).}
+
+\bibitem[\citeproctext]{ref-RN1042}
+\CSLLeftMargin{112. }%
+\CSLRightInline{Pighi, L., De Nitto, S., Salvagno, G. L. \& Lippi, G.
+\href{https://doi.org/10.1080/07420528.2023.2298264}{Vaccination time
+does not influence total anti-SARS-CoV-2 antibodies response}.
+\emph{Chronobiol Int} \textbf{41}, 309--310 (2024).}
+
+\bibitem[\citeproctext]{ref-RN1043}
+\CSLLeftMargin{113. }%
+\CSLRightInline{Lin, T. Y. \& Hung, S. C.
+\href{https://doi.org/10.2215/CJN.0000000000000207}{Morning vaccination
+compared with afternoon/evening vaccination on humoral response to
+SARS-CoV-2 adenovirus vector-based vaccine in hemodialysis patients}.
+\emph{Clin J Am Soc Nephrol} \textbf{18}, 1077--1079 (2023).}
+
+\bibitem[\citeproctext]{ref-RN1044}
+\CSLLeftMargin{114. }%
+\CSLRightInline{Zahradka, I. \emph{et al.}
+\href{https://doi.org/10.1016/j.ajt.2024.03.004}{Morning administration
+enhances humoral response to SARS-CoV-2 vaccination in kidney transplant
+recipients}. \emph{Am J Transplant} \textbf{24}, 1690--1697 (2024).}
+
+\bibitem[\citeproctext]{ref-RN1048}
+\CSLLeftMargin{115. }%
+\CSLRightInline{Strazisar, B. G. \& Strazisar, L.
+\href{https://doi.org/10.1016/j.jsmc.2021.05.007}{Daylight saving time:
+Pros and cons}. \emph{Sleep Med Clin} \textbf{16}, 523--531 (2021).}
+
+\bibitem[\citeproctext]{ref-RN1050}
+\CSLLeftMargin{116. }%
+\CSLRightInline{Renosa, M. D. C. \emph{et al.}
+\href{https://doi.org/10.1136/bmjgh-2021-006237}{Nudging toward
+vaccination: A systematic review}. \emph{BMJ Glob Health} \textbf{6},
+(2021).}
+
+\bibitem[\citeproctext]{ref-RN1051}
+\CSLLeftMargin{117. }%
+\CSLRightInline{Lee, K. A., Flores, R. R., Jang, I. H., Saathoff, A. \&
+Robbins, P. D. \href{https://doi.org/10.3389/fragi.2022.900028}{Immune
+senescence, immunosenescence and aging}. \emph{Front Aging} \textbf{3},
+900028 (2022).}
+
+\bibitem[\citeproctext]{ref-RN1058}
+\CSLLeftMargin{118. }%
+\CSLRightInline{Livieratos, A., Zeitzer, J. M. \& Tsiodras, S.
+\href{https://doi.org/10.3390/vaccines13080845}{A narrative review on
+how timing matters: Circadian and sleep influences on influenza vaccine
+induced immunity}. \emph{Vaccines (Basel)} \textbf{13}, (2025).}
+
+\bibitem[\citeproctext]{ref-RN1052}
+\CSLLeftMargin{119. }%
+\CSLRightInline{Resuehr, D. \emph{et al.}
+\href{https://doi.org/10.1177/0748730419826694}{Shift work disrupts
+circadian regulation of the transcriptome in hospital nurses}. \emph{J
+Biol Rhythms} \textbf{34}, 167--177 (2019).}
+
+\end{CSLReferences}
+
+
+
+
+\end{document}
