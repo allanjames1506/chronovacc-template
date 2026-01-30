@@ -1,5 +1,6 @@
 project:
   type: manuscript
+  output-dir: docs
 
 format-links: false
 
@@ -7,6 +8,7 @@ notebook-links: false
 
 execute:
   freeze: auto
+  debug: true
 
 format:
   html:
