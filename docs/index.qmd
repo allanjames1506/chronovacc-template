@@ -47,7 +47,7 @@ Broadly speaking biological clocks allow us to adapt to and anticipate temporal 
 
 Clocks provide a competitive advantage for the organisms they serve. The best demonstration of this is for experiments in plant circadian biology where for plants genetically compromised in the pacing of their clock - and therefore unable to match the light and dark conditions of their environment – survived more poorly than plants able to correctly match the external light-dark cycle[@RN293]. Clocks anticipate predictable changes in the environment (light & dark, warm & cool, for example), rather than reacting to change.  For example, in plants again, it has been shown that photosynthetic machinery is assembled daily before the onset of dawn in anticipation of the availability of light so that energy harvesting is optimised[@RN124]. In mammalian systems the liver and intestine clocks anticipate, rather than react to, mealtimes to coordinate food availability with nutrient processing and energy demand[@RN970; @RN1055].
 
-The ‘clock as a tool’ for optimising performance is increasingly being harnessed in modern life.  A good example of this is in the arena of elite sports, often occurring across multiple Time Zones, where adapting training strategies to align with circadian regulation is now viewed as essential. Marginal, yet meaningful, advantages over competition can be gained when clock factors are keyed into training regimes[@RN1047].  ‘Tools for the clock’ are also increasingly apparent, for example the development of non-invasive wearable smart devices for characterising the clock, viewed as crucial for advancing personalised medicine – developments that can be viewed as providing an extra edge or dimension via the design of individualised treatment plans tailored to the specific needs patients[@RN1057; @RN1054].
+The ‘clock as a tool’ for optimising performance is increasingly being harnessed in modern life.  A good example of this is in the arena of elite sports, often occurring across multiple Time Zones, where adapting training strategies to align with circadian regulation is now viewed as essential. Marginal, yet meaningful, advantages over competition can be gained when clock factors are keyed into training regimes[@RN1047].  ‘Tools for the clock’ are also increasingly apparent, for example the development of non-invasive wearable smart devices for characterising the clock, viewed as crucial for advancing personalised medicine – developments that can be viewed as providing an extra edge or dimension via the design of individualised treatment plans tailored to the specific needs of patients[@RN1057; @RN1054].
 
 Therefore, clocks themselves inherently provide a competitive edge and, thanks to decades of fundamental research into circadian clock function, we increasingly see clock knowledge harnessed for gaining competitive edges in various societal contexts, many of which are referred to as chronotherapies.  Chronovaccination – a vaccination chronotherapy – has the potential to provide a competitive edge in vaccine effectiveness. 
 
@@ -130,7 +130,8 @@ gt_tbl <-
   ) 
 
 # Show the gt table
-gt_tbl %>% as_raw_html() 
+gt_tbl %>% 
+  as_raw_html()
 
 ```
 

@@ -42,10 +42,10 @@ effectiveness?</article-title>
       <author-notes>
         <corresp id="cor-1">allanjames1506@gmail.com</corresp>
       </author-notes>
-      <pub-date date-type="pub" publication-format="electronic" iso-8601-date="2025-10-07">
-        <year>2025</year>
-        <month>10</month>
-        <day>7</day>
+      <pub-date date-type="pub" publication-format="electronic" iso-8601-date="2026-01-30">
+        <year>2026</year>
+        <month>1</month>
+        <day>30</day>
       </pub-date>
       <history/>
       <abstract>
@@ -211,7 +211,7 @@ work.</funding-statement>
     characterising the clock, viewed as crucial for advancing
     personalised medicine – developments that can be viewed as providing
     an extra edge or dimension via the design of individualised
-    treatment plans tailored to the specific needs
+    treatment plans tailored to the specific needs of
     patients<sup><xref alt="25" rid="ref-RN1057" ref-type="bibr">25</xref>,<xref alt="26" rid="ref-RN1054" ref-type="bibr">26</xref></sup>.</p>
         <p>Therefore, clocks themselves inherently provide a competitive
     edge and, thanks to decades of fundamental research into circadian
@@ -6007,7 +6007,7 @@ work.</funding-statement>
       </fn>
     </fn-group>
   </back>
-  <sub-article article-type="notebook" id="nb-3-nb-article">
+  <sub-article article-type="notebook" id="nb-2-nb-article">
     <front-stub>
       <title-group>
         <article-title>Chronovaccination: the competitive edge in vaccine
@@ -6189,7 +6189,7 @@ chronovaccination studies.</p>
     characterising the clock, viewed as crucial for advancing
     personalised medicine – developments that can be viewed as providing
     an extra edge or dimension via the design of individualised
-    treatment plans tailored to the specific needs
+    treatment plans tailored to the specific needs of
     patients<sup><xref alt="25" rid="ref-RN1057-nb-article" ref-type="bibr">25</xref>,<xref alt="26" rid="ref-RN1054-nb-article" ref-type="bibr">26</xref></sup>.</p>
           <p>Therefore, clocks themselves inherently provide a competitive
     edge and, thanks to decades of fundamental research into circadian
@@ -6729,7 +6729,8 @@ gt_tbl &lt;-
   ) 
 
 # Show the gt table
-gt_tbl %&gt;% as_raw_html() </code>
+gt_tbl %&gt;% 
+  as_raw_html()</code>
           <fig id="tbl-variables-nb-article">
             <caption>
               <p>Table 1: Person, Place &amp; Time variables for
