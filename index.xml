@@ -42,10 +42,10 @@ effectiveness?</article-title>
       <author-notes>
         <corresp id="cor-1">allanjames1506@gmail.com</corresp>
       </author-notes>
-      <pub-date date-type="pub" publication-format="electronic" iso-8601-date="2026-01-30">
+      <pub-date date-type="pub" publication-format="electronic" iso-8601-date="2026-02-01">
         <year>2026</year>
-        <month>1</month>
-        <day>30</day>
+        <month>2</month>
+        <day>1</day>
       </pub-date>
       <history/>
       <abstract>
@@ -117,11 +117,11 @@ work.</funding-statement>
     the immune
     system<sup><xref alt="8" rid="ref-RN930" ref-type="bibr">8</xref>,<xref alt="9" rid="ref-RN931" ref-type="bibr">9</xref></sup>,
     but precise and robust coordination of circadian rhythmicity is the
-    product of a network of tissue and organ clocks, including a
-    ‘master’ clock – primarily influenced by light - situated in the
+    product of a network of tissue and organ clocks, including a central
+    clock – primarily influenced by light - situated in the
     suprachiasmatic nucleus (SCN) of the hypothalamus brain region that
-    dictates the overall pace for synchronising ‘slave’ clocks located
-    in virtually all tissues and organs of the
+    dictates the overall pace for synchronising peripheral clocks
+    located in virtually all tissues and organs of the
     body<sup><xref alt="10" rid="ref-RN932" ref-type="bibr">10</xref></sup>.</p>
       </sec>
       <sec id="clock-plasticity-permits-entrainment">
@@ -146,9 +146,9 @@ work.</funding-statement>
     - the discrepancy between work and free days, between social and
     biological time. Daylight saving is another example of temporary
     desynchronisation in which misalignment occurs between endogenous
-    circadian phase and shifted clock time. While the SCN master
+    circadian phase and shifted clock time. While the SCN central
     pacemaker itself adjusts to changes in the environment relatively
-    quickly, the slave clocks can take longer to
+    quickly, the peripheral clocks can take longer to
     adjust<sup><xref alt="15" rid="ref-RN935" ref-type="bibr">15</xref>,<xref alt="16" rid="ref-RN936" ref-type="bibr">16</xref></sup>.
     Chronic circadian disruption has serious implications for human
     health and can increase the risk for the expression and development
@@ -551,7 +551,7 @@ work.</funding-statement>
   on GMT. This discrepancy between social time and sun time leads to
   later bedtimes and meal schedules in regions northwestern Spain,
   potentially affecting sleep and overall circadian
-  rhythmicity<sup><xref alt="75" rid="ref-RN1031" ref-type="bibr">75</xref></sup>.</p>
+  rhythmicity<sup><xref alt="73" rid="ref-RN1029" ref-type="bibr">73</xref></sup>.</p>
     </sec>
     <sec id="time-immune-function">
       <title>4 Time – Immune function</title>
@@ -677,17 +677,17 @@ work.</funding-statement>
   predetermined lark and owl propensities interacting with, and
   ultimately being shaped by, their surroundings; for example,
   rural/urban settings and summer/winter light environments. Generally,
-  less is known about how ‘slave’ clocks, in peripheral organs (brain,
-  heart, liver, gut, pancreas, adipose tissue, adrenal glands, lungs,
-  and skeletal
+  less is known about how secondary oscillators, in peripheral organs
+  (brain, heart, liver, gut, pancreas, adipose tissue, adrenal glands,
+  lungs, and skeletal
   muscle<sup><xref alt="12" rid="ref-RN1022" ref-type="bibr">12</xref></sup>)
-  entrain with the SCN ‘master’ clock and how potential misalignment
+  entrain with the SCN central pacemaker and how potential misalignment
   mechanistically contributes to human health. Roenneberg &amp;
   Merrow<sup><xref alt="18" rid="ref-RN458" ref-type="bibr">18</xref></sup>
   point out, however, that there is likely to be a constellation of
   possible phase entrainments, or ‘phase maps’, describing the
-  entrainment between the master and slave clocks; reflecting the idea
-  that we entrain differently at different times of our lives, at
+  entrainment between the central and peripheral clocks; reflecting the
+  idea that we entrain differently at different times of our lives, at
   different times of the year and amongst each other, and whether we
   live in cities or in the
   country<sup><xref alt="18" rid="ref-RN458" ref-type="bibr">18</xref></sup>.
@@ -789,9 +789,17 @@ work.</funding-statement>
   Like that for the risk of COVID-19 breakthrough infection, varicella
   infection risk, after adjusting for ethnicity, sex, immunodeficiency,
   and obesity, followed a sinusoidal pattern consistent with a diurnal
-  rhythm in vaccine effectiveness.</p>
+  rhythm in vaccine effectiveness. Exploratory post-hoc analysis of a
+  clinical trial
+  (DANFLU-1<sup><xref alt="104" rid="ref-RN959" ref-type="bibr">104</xref></sup>)
+  of the relative effectiveness of high dose versus standard dose
+  quadrivalent influenza vaccines established that earlier TODV was
+  associated with fewer respiratory
+  hospitalisations<sup><xref alt="105" rid="ref-RN960" ref-type="bibr">105</xref></sup>,
+  although the authors noted that this association was likely limited by
+  relatively few outcomes in subjects vaccinated later in the day.</p>
       <p>Two independent systematic
-  reviews<sup><xref alt="2" rid="ref-RN928" ref-type="bibr">2</xref>,<xref alt="104" rid="ref-RN1035" ref-type="bibr">104</xref></sup>
+  reviews<sup><xref alt="2" rid="ref-RN928" ref-type="bibr">2</xref>,<xref alt="106" rid="ref-RN1035" ref-type="bibr">106</xref></sup>
   have surveyed published studies on the human immune response to
   vaccination at different times of day in order to gauge the evidence
   supporting diurnal variation in the effectiveness of vaccination. Wyse
@@ -802,7 +810,7 @@ work.</funding-statement>
   that overall there was insufficient overall evidence that
   administration of vaccines at different times of day affected immune
   outcomes. On the other hand, Vink <italic>et
-  al.</italic><sup><xref alt="104" rid="ref-RN1035" ref-type="bibr">104</xref></sup>
+  al.</italic><sup><xref alt="106" rid="ref-RN1035" ref-type="bibr">106</xref></sup>
   concluded that that morning vaccination enhanced antibody responses in
   adults aged 60 years and older, noting that this age group is a key
   demographic for influenza and COVID-19 vaccination. Studies qualified
@@ -828,20 +836,20 @@ work.</funding-statement>
   with the remaining 10 studies reporting no effect. Of the studies that
   reported an association between TODV and outcome of vaccination, 3
   presented data that could be used to estimate the size of this
-  effect<sup><xref alt="100" rid="ref-RN957" ref-type="bibr">100</xref>,<xref alt="102" rid="ref-RN954" ref-type="bibr">102</xref>,<xref alt="105" rid="ref-RN1032" ref-type="bibr">105</xref></sup>.
+  effect<sup><xref alt="100" rid="ref-RN957" ref-type="bibr">100</xref>,<xref alt="102" rid="ref-RN954" ref-type="bibr">102</xref>,<xref alt="107" rid="ref-RN1032" ref-type="bibr">107</xref></sup>.
   For example, Hazan <italic>et
   al.</italic><sup><xref alt="102" rid="ref-RN954" ref-type="bibr">102</xref></sup>
   estimated that optimising the time of vaccination might improve
   vaccine effectiveness by 8.6–25%.</p>
       <p>Vink <italic>et
-  al.</italic><sup><xref alt="104" rid="ref-RN1035" ref-type="bibr">104</xref></sup>
+  al.</italic><sup><xref alt="106" rid="ref-RN1035" ref-type="bibr">106</xref></sup>
   identified 860 records through their literature search, 17 of which
   met their eligibility criteria; five investigated the effect of
   vaccination timing on immune responses to influenza
-  vaccines<sup><xref alt="84" rid="ref-RN956" ref-type="bibr">84</xref>,<xref alt="85" rid="ref-RN999" ref-type="bibr">85</xref>,<xref alt="106" rid="ref-RN1036" ref-type="bibr">106</xref>–<xref alt="108" rid="ref-RN1038" ref-type="bibr">108</xref></sup>
+  vaccines<sup><xref alt="84" rid="ref-RN956" ref-type="bibr">84</xref>,<xref alt="85" rid="ref-RN999" ref-type="bibr">85</xref>,<xref alt="108" rid="ref-RN1036" ref-type="bibr">108</xref>–<xref alt="110" rid="ref-RN1038" ref-type="bibr">110</xref></sup>
   and nine explored how time of day influences immune responses to
   SARS-CoV-2
-  vaccines<sup><xref alt="100" rid="ref-RN957" ref-type="bibr">100</xref>,<xref alt="101" rid="ref-RN1020" ref-type="bibr">101</xref>,<xref alt="105" rid="ref-RN1032" ref-type="bibr">105</xref>,<xref alt="109" rid="ref-RN1039" ref-type="bibr">109</xref>–<xref alt="114" rid="ref-RN1044" ref-type="bibr">114</xref></sup>.
+  vaccines<sup><xref alt="100" rid="ref-RN957" ref-type="bibr">100</xref>,<xref alt="101" rid="ref-RN1020" ref-type="bibr">101</xref>,<xref alt="107" rid="ref-RN1032" ref-type="bibr">107</xref>,<xref alt="111" rid="ref-RN1039" ref-type="bibr">111</xref>–<xref alt="116" rid="ref-RN1044" ref-type="bibr">116</xref></sup>.
   Eleven out of the 17 studies reported statistically significant
   effects of vaccination timing, with ten reporting stronger antibody
   responses following morning vaccination, while one study favoured
@@ -851,13 +859,13 @@ work.</funding-statement>
   showed stronger antibody responses for 60-year-olds or older for
   morning vs afternoon vaccination. Pooled results from two randomised
   controlled
-  trials<sup><xref alt="84" rid="ref-RN956" ref-type="bibr">84</xref>,<xref alt="106" rid="ref-RN1036" ref-type="bibr">106</xref></sup>
+  trials<sup><xref alt="84" rid="ref-RN956" ref-type="bibr">84</xref>,<xref alt="108" rid="ref-RN1036" ref-type="bibr">108</xref></sup>
   for influenza vaccination showed a statistically significant
   small-to-medium standardised mean difference (SMD) in antibody titers
   for adults aged 65 and older (effect size; SMD = 0.32, 95% CI =
   0.21–0.43), with morning vaccination consistently yielding higher
   titers 1 month post-vaccination. However, Vink <italic>et
-  al.</italic><sup><xref alt="104" rid="ref-RN1035" ref-type="bibr">104</xref></sup>
+  al.</italic><sup><xref alt="106" rid="ref-RN1035" ref-type="bibr">106</xref></sup>
   caution over-interpretation of this reported effect size due to the
   limited number of randomised controlled trials used in the
   meta-analysis.</p>
@@ -889,7 +897,7 @@ work.</funding-statement>
   to support the idea that it can be a low-cost, low-risk strategy for
   boosting vaccine effectiveness? The case for chronovaccination –
   surveyed in systematic
-  reviews<sup><xref alt="2" rid="ref-RN928" ref-type="bibr">2</xref>,<xref alt="104" rid="ref-RN1035" ref-type="bibr">104</xref></sup>
+  reviews<sup><xref alt="2" rid="ref-RN928" ref-type="bibr">2</xref>,<xref alt="106" rid="ref-RN1035" ref-type="bibr">106</xref></sup>
   – is somewhat patchy. While the influence of TODV is compelling in
   animal studies where environmental conditions are strictly
   controlled<sup><xref alt="76" rid="ref-RN988" ref-type="bibr">76</xref>,<xref alt="80" rid="ref-RN993" ref-type="bibr">80</xref></sup>,
@@ -908,7 +916,7 @@ work.</funding-statement>
   studies<sup><xref alt="102" rid="ref-RN954" ref-type="bibr">102</xref>,<xref alt="103" rid="ref-RN1045" ref-type="bibr">103</xref></sup>,
   but report modest effect sizes and suffer from potential biases due to
   non-randomisation of cohorts. Vink <italic>et
-  al.</italic><sup><xref alt="104" rid="ref-RN1035" ref-type="bibr">104</xref></sup>
+  al.</italic><sup><xref alt="106" rid="ref-RN1035" ref-type="bibr">106</xref></sup>
   demonstrated that the strongest evidence for diurnal variation in
   vaccination effectiveness was found for influenza vaccines using
   randomised control trials and Wyse <italic>et
@@ -925,7 +933,7 @@ work.</funding-statement>
       <p>Even if there was a compelling advantage of TODV, would it be
   readily integrated into vaccination programmes? One only has to look
   at the debate around Daylight Saving Time
-  (DST)<sup><xref alt="115" rid="ref-RN1048" ref-type="bibr">115</xref></sup>
+  (DST)<sup><xref alt="117" rid="ref-RN1048" ref-type="bibr">117</xref></sup>
   to understand the sensitive nature of policies that have disruptive
   effects on social routines. Another relevant example is the idea of
   later school start times for adolescents – designed to align better
@@ -946,19 +954,19 @@ work.</funding-statement>
   immunisation initiatives more narrowly aligned to an optimum TODV may
   be detrimental to vaccine uptake, although nudging based interventions
   have shown potential in bolstering intention to
-  vaccinate<sup><xref alt="116" rid="ref-RN1050" ref-type="bibr">116</xref></sup>,
+  vaccinate<sup><xref alt="118" rid="ref-RN1050" ref-type="bibr">118</xref></sup>,
   and may therefore be a useful strategy for fostering confidence in
   time-of-day vaccinations.</p>
       <p>While the benefits of TODV across whole populations remains
   marginal, a clearer case can be made for chronovaccination in adults
   60 years and older, where morning vaccination was more
-  beneficial<sup><xref alt="104" rid="ref-RN1035" ref-type="bibr">104</xref></sup>.
+  beneficial<sup><xref alt="106" rid="ref-RN1035" ref-type="bibr">106</xref></sup>.
   It has been speculated that immunosenescence - the gradual age-related
   decline in both innate and adaptive immune function - may play a
-  role<sup><xref alt="106" rid="ref-RN1036" ref-type="bibr">106</xref>,<xref alt="117" rid="ref-RN1051" ref-type="bibr">117</xref></sup>.
+  role<sup><xref alt="108" rid="ref-RN1036" ref-type="bibr">108</xref>,<xref alt="119" rid="ref-RN1051" ref-type="bibr">119</xref></sup>.
   Similarly, immunosuppressed individuals might benefit from
   TODV-mediated boosted vaccine
-  effectiveness<sup><xref alt="113" rid="ref-RN1043" ref-type="bibr">113</xref>,<xref alt="114" rid="ref-RN1044" ref-type="bibr">114</xref></sup>,
+  effectiveness<sup><xref alt="115" rid="ref-RN1043" ref-type="bibr">115</xref>,<xref alt="116" rid="ref-RN1044" ref-type="bibr">116</xref></sup>,
   suggesting that TODV may find a role in targeted age group and
   co-morbidity cohorts. The potential of infant chronovaccination is
   largely an unexplored area, with most studies focussed on adult
@@ -976,7 +984,7 @@ work.</funding-statement>
   role of sleep in immune function, and therefore its contribution
   chronovaccination, is not developed in this review, Livieratos
   <italic>et
-  al.</italic><sup><xref alt="118" rid="ref-RN1058" ref-type="bibr">118</xref></sup>
+  al.</italic><sup><xref alt="120" rid="ref-RN1058" ref-type="bibr">120</xref></sup>
   have reviewed the evidence of the impact of circadian and sleep
   factors on influenza vaccine-induced immune responses, emphasising
   that yet another variable – sleep duration – should be considered for
@@ -1003,7 +1011,7 @@ work.</funding-statement>
   nurses’ circadian rhythms in body temperature have been shown to be
   significantly misaligned due to shift working patterns, causing work
   and sleep schedules to be out of phase with each
-  other<sup><xref alt="119" rid="ref-RN1052" ref-type="bibr">119</xref></sup>.
+  other<sup><xref alt="121" rid="ref-RN1052" ref-type="bibr">121</xref></sup>.
   Both external time of vaccination and internal (biological) time
   recording are therefore important factors, with internal time
   recording representing a particular technical
@@ -1021,12 +1029,21 @@ work.</funding-statement>
   of the role of circadian rhythms in relation to health and well-being,
   or ‘circadian hygiene’, might ultimately drive individual awareness of
   optimal times for vaccination. Therefore, as Vink <italic>et
-  al.</italic><sup><xref alt="104" rid="ref-RN1035" ref-type="bibr">104</xref></sup>
+  al.</italic><sup><xref alt="106" rid="ref-RN1035" ref-type="bibr">106</xref></sup>
   allude to in their review, the future vaccine customer may well regard
   optimal vaccination as an hourly continuous variable in relation to
   their personal circadian phase rather than the more blunt binary
   (morning <italic>vs</italic> afternoon) variable we currently
-  consider.</p>
+  consider. In this regard it will be particularly interesting to learn
+  the outcome of the ‘Chrono-Vax’ clinical trial that aims to determine
+  the effect of influenza vaccination timing on antibody and T-cell
+  responses across a continuous time window from early morning to late
+  afternoon for participants aged between 60 and 85 years
+  old<sup><xref alt="122" rid="ref-RN1063" ref-type="bibr">122</xref></sup>.
+  Importantly, participants will be asked to provide data on their
+  history of shift work, comorbidities, (sleep) medication use,
+  lifestyle characteristics, as well as insights into their
+  chronotype<sup><xref alt="122" rid="ref-RN1063" ref-type="bibr">122</xref></sup>.</p>
     </sec>
     <sec id="conclusions">
       <title>8 Conclusions</title>
@@ -1044,7 +1061,11 @@ work.</funding-statement>
   whether society buys into the idea and whether health agencies
   conclude that the fragility of vaccine uptake might ultimately be
   further jeopardised by changes to well established vaccination
-  programmes.</p>
+  programmes. While the timing of vaccinations may not be at the
+  forefront of our minds during interpandemic peace times, continued
+  research on the potential benefits of chronovaccination should be an
+  important strand of our approach to preparing for future
+  pandemics.</p>
     </sec>
     <sec id="acknowlegements">
       <title>9 Acknowlegements</title>
@@ -1514,6 +1535,103 @@ work.</funding-statement>
           <uri>https://www.ncbi.nlm.nih.gov/pubmed/26838474</uri>
           <pub-id pub-id-type="doi">10.1038/ncomms10580</pub-id>
           <fpage>10580</fpage>
+          <lpage/>
+        </element-citation>
+      </ref>
+      <ref id="ref-RN960">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Christensen</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Johansen</surname>
+              <given-names>N. D.</given-names>
+            </name>
+            <name>
+              <surname>Janstrup</surname>
+              <given-names>K. H.</given-names>
+            </name>
+            <name>
+              <surname>Modin</surname>
+              <given-names>D.</given-names>
+            </name>
+            <name>
+              <surname>Skaarup</surname>
+              <given-names>K. G.</given-names>
+            </name>
+            <name>
+              <surname>Nealon</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Samson</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Loiacono</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Harris</surname>
+              <given-names>R.</given-names>
+            </name>
+            <name>
+              <surname>Larsen</surname>
+              <given-names>C. S.</given-names>
+            </name>
+            <name>
+              <surname>Jensen</surname>
+              <given-names>A. M. R.</given-names>
+            </name>
+            <name>
+              <surname>Landler</surname>
+              <given-names>N. E.</given-names>
+            </name>
+            <name>
+              <surname>Claggett</surname>
+              <given-names>B. L.</given-names>
+            </name>
+            <name>
+              <surname>Solomon</surname>
+              <given-names>S. D.</given-names>
+            </name>
+            <name>
+              <surname>Gislason</surname>
+              <given-names>G. H.</given-names>
+            </name>
+            <name>
+              <surname>Kober</surname>
+              <given-names>L.</given-names>
+            </name>
+            <name>
+              <surname>Landray</surname>
+              <given-names>M. J.</given-names>
+            </name>
+            <name>
+              <surname>Sivapalan</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>Jensen</surname>
+              <given-names>J. U. S.</given-names>
+            </name>
+            <name>
+              <surname>Biering-Sorensen</surname>
+              <given-names>T.</given-names>
+            </name>
+          </person-group>
+          <article-title>Time of day for vaccination, outcomes, and relative effectiveness of high-dose vs. Standard-dose quadrivalent influenza vaccine: A post hoc analysis of the DANFLU-1 randomized clinical trial</article-title>
+          <source>J Infect</source>
+          <year iso-8601-date="2024">2024</year>
+          <volume>89</volume>
+          <issue>5</issue>
+          <issn>1532-2742 (Electronic)
+      0163-4453 (Linking)</issn>
+          <uri>https://www.ncbi.nlm.nih.gov/pubmed/39303788</uri>
+          <pub-id pub-id-type="doi">10.1016/j.jinf.2024.106276</pub-id>
+          <fpage>106276</fpage>
           <lpage/>
         </element-citation>
       </ref>
@@ -2877,6 +2995,103 @@ work.</funding-statement>
           <uri>https://www.ncbi.nlm.nih.gov/pubmed/36717561</uri>
           <pub-id pub-id-type="doi">10.1038/s41467-023-35979-2</pub-id>
           <fpage>476</fpage>
+          <lpage/>
+        </element-citation>
+      </ref>
+      <ref id="ref-RN959">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Johansen</surname>
+              <given-names>N. D.</given-names>
+            </name>
+            <name>
+              <surname>Modin</surname>
+              <given-names>D.</given-names>
+            </name>
+            <name>
+              <surname>Nealon</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Samson</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Salamand</surname>
+              <given-names>C.</given-names>
+            </name>
+            <name>
+              <surname>Loiacono</surname>
+              <given-names>M. M.</given-names>
+            </name>
+            <name>
+              <surname>Larsen</surname>
+              <given-names>C. S.</given-names>
+            </name>
+            <name>
+              <surname>Jensen</surname>
+              <given-names>A. M. R.</given-names>
+            </name>
+            <name>
+              <surname>Landler</surname>
+              <given-names>N. E.</given-names>
+            </name>
+            <name>
+              <surname>Claggett</surname>
+              <given-names>B. L.</given-names>
+            </name>
+            <name>
+              <surname>Solomon</surname>
+              <given-names>S. D.</given-names>
+            </name>
+            <name>
+              <surname>Landray</surname>
+              <given-names>M. J.</given-names>
+            </name>
+            <name>
+              <surname>Gislason</surname>
+              <given-names>G. H.</given-names>
+            </name>
+            <name>
+              <surname>Kober</surname>
+              <given-names>L.</given-names>
+            </name>
+            <name>
+              <surname>Jensen</surname>
+              <given-names>J. U. S.</given-names>
+            </name>
+            <name>
+              <surname>Sivapalan</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>Vestergaard</surname>
+              <given-names>L. S.</given-names>
+            </name>
+            <name>
+              <surname>Valentiner-Branth</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>Krause</surname>
+              <given-names>T. G.</given-names>
+            </name>
+            <name>
+              <surname>Biering-Sorensen</surname>
+              <given-names>T.</given-names>
+            </name>
+          </person-group>
+          <article-title>A pragmatic randomized feasibility trial of influenza vaccines</article-title>
+          <source>NEJM Evid</source>
+          <year iso-8601-date="2023">2023</year>
+          <volume>2</volume>
+          <issue>2</issue>
+          <issn>2766-5526 (Electronic)
+      2766-5526 (Linking)</issn>
+          <uri>https://www.ncbi.nlm.nih.gov/pubmed/38320035</uri>
+          <pub-id pub-id-type="doi">10.1056/EVIDoa2200206</pub-id>
+          <fpage>EVIDoa2200206</fpage>
           <lpage/>
         </element-citation>
       </ref>
@@ -5185,6 +5400,62 @@ work.</funding-statement>
           <lpage/>
         </element-citation>
       </ref>
+      <ref id="ref-RN1063">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Vink</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Brouwers</surname>
+              <given-names>T. M. J.</given-names>
+            </name>
+            <name>
+              <surname>Beckers</surname>
+              <given-names>L.</given-names>
+            </name>
+            <name>
+              <surname>Smit</surname>
+              <given-names>D.</given-names>
+            </name>
+            <name>
+              <surname>Vos</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Guichelaar</surname>
+              <given-names>T.</given-names>
+            </name>
+            <name>
+              <surname>Bonten</surname>
+              <given-names>T. N.</given-names>
+            </name>
+            <name>
+              <surname>Kervezee</surname>
+              <given-names>L.</given-names>
+            </name>
+            <name>
+              <surname>Baarle</surname>
+              <given-names>D. van</given-names>
+            </name>
+            <name>
+              <surname>Wallinga</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+          <article-title>The chrono-vax trial protocol: The effect of the time of day of influenza vaccination on immune responses in adults aged 60-85 years</article-title>
+          <source>Contemp Clin Trials</source>
+          <year iso-8601-date="2025">2025</year>
+          <volume>156</volume>
+          <issn>1559-2030 (Electronic)
+      1551-7144 (Linking)</issn>
+          <uri>https://www.ncbi.nlm.nih.gov/pubmed/40752819</uri>
+          <pub-id pub-id-type="doi">10.1016/j.cct.2025.108040</pub-id>
+          <fpage>108040</fpage>
+          <lpage/>
+        </element-citation>
+      </ref>
       <ref id="ref-RN1035">
         <element-citation publication-type="article-journal">
           <person-group person-group-type="author">
@@ -6095,11 +6366,11 @@ chronovaccination studies.</p>
     the immune
     system<sup><xref alt="8" rid="ref-RN930-nb-article" ref-type="bibr">8</xref>,<xref alt="9" rid="ref-RN931-nb-article" ref-type="bibr">9</xref></sup>,
     but precise and robust coordination of circadian rhythmicity is the
-    product of a network of tissue and organ clocks, including a
-    ‘master’ clock – primarily influenced by light - situated in the
+    product of a network of tissue and organ clocks, including a central
+    clock – primarily influenced by light - situated in the
     suprachiasmatic nucleus (SCN) of the hypothalamus brain region that
-    dictates the overall pace for synchronising ‘slave’ clocks located
-    in virtually all tissues and organs of the
+    dictates the overall pace for synchronising peripheral clocks
+    located in virtually all tissues and organs of the
     body<sup><xref alt="10" rid="ref-RN932-nb-article" ref-type="bibr">10</xref></sup>.</p>
         </sec>
         <sec id="clock-plasticity-permits-entrainment-nb-article">
@@ -6124,9 +6395,9 @@ chronovaccination studies.</p>
     - the discrepancy between work and free days, between social and
     biological time. Daylight saving is another example of temporary
     desynchronisation in which misalignment occurs between endogenous
-    circadian phase and shifted clock time. While the SCN master
+    circadian phase and shifted clock time. While the SCN central
     pacemaker itself adjusts to changes in the environment relatively
-    quickly, the slave clocks can take longer to
+    quickly, the peripheral clocks can take longer to
     adjust<sup><xref alt="15" rid="ref-RN935-nb-article" ref-type="bibr">15</xref>,<xref alt="16" rid="ref-RN936-nb-article" ref-type="bibr">16</xref></sup>.
     Chronic circadian disruption has serious implications for human
     health and can increase the risk for the expression and development
@@ -6529,7 +6800,7 @@ chronovaccination studies.</p>
   on GMT. This discrepancy between social time and sun time leads to
   later bedtimes and meal schedules in regions northwestern Spain,
   potentially affecting sleep and overall circadian
-  rhythmicity<sup><xref alt="75" rid="ref-RN1031-nb-article" ref-type="bibr">75</xref></sup>.</p>
+  rhythmicity<sup><xref alt="73" rid="ref-RN1029-nb-article" ref-type="bibr">73</xref></sup>.</p>
       </sec>
       <sec id="time-immune-function-nb-article">
         <title>4 Time – Immune function</title>
@@ -6655,17 +6926,17 @@ chronovaccination studies.</p>
   predetermined lark and owl propensities interacting with, and
   ultimately being shaped by, their surroundings; for example,
   rural/urban settings and summer/winter light environments. Generally,
-  less is known about how ‘slave’ clocks, in peripheral organs (brain,
-  heart, liver, gut, pancreas, adipose tissue, adrenal glands, lungs,
-  and skeletal
+  less is known about how secondary oscillators, in peripheral organs
+  (brain, heart, liver, gut, pancreas, adipose tissue, adrenal glands,
+  lungs, and skeletal
   muscle<sup><xref alt="12" rid="ref-RN1022-nb-article" ref-type="bibr">12</xref></sup>)
-  entrain with the SCN ‘master’ clock and how potential misalignment
+  entrain with the SCN central pacemaker and how potential misalignment
   mechanistically contributes to human health. Roenneberg &amp;
   Merrow<sup><xref alt="18" rid="ref-RN458-nb-article" ref-type="bibr">18</xref></sup>
   point out, however, that there is likely to be a constellation of
   possible phase entrainments, or ‘phase maps’, describing the
-  entrainment between the master and slave clocks; reflecting the idea
-  that we entrain differently at different times of our lives, at
+  entrainment between the central and peripheral clocks; reflecting the
+  idea that we entrain differently at different times of our lives, at
   different times of the year and amongst each other, and whether we
   live in cities or in the
   country<sup><xref alt="18" rid="ref-RN458-nb-article" ref-type="bibr">18</xref></sup>.
@@ -6827,9 +7098,17 @@ gt_tbl %&gt;%
   Like that for the risk of COVID-19 breakthrough infection, varicella
   infection risk, after adjusting for ethnicity, sex, immunodeficiency,
   and obesity, followed a sinusoidal pattern consistent with a diurnal
-  rhythm in vaccine effectiveness.</p>
+  rhythm in vaccine effectiveness. Exploratory post-hoc analysis of a
+  clinical trial
+  (DANFLU-1<sup><xref alt="104" rid="ref-RN959-nb-article" ref-type="bibr">104</xref></sup>)
+  of the relative effectiveness of high dose versus standard dose
+  quadrivalent influenza vaccines established that earlier TODV was
+  associated with fewer respiratory
+  hospitalisations<sup><xref alt="105" rid="ref-RN960-nb-article" ref-type="bibr">105</xref></sup>,
+  although the authors noted that this association was likely limited by
+  relatively few outcomes in subjects vaccinated later in the day.</p>
         <p>Two independent systematic
-  reviews<sup><xref alt="2" rid="ref-RN928-nb-article" ref-type="bibr">2</xref>,<xref alt="104" rid="ref-RN1035-nb-article" ref-type="bibr">104</xref></sup>
+  reviews<sup><xref alt="2" rid="ref-RN928-nb-article" ref-type="bibr">2</xref>,<xref alt="106" rid="ref-RN1035-nb-article" ref-type="bibr">106</xref></sup>
   have surveyed published studies on the human immune response to
   vaccination at different times of day in order to gauge the evidence
   supporting diurnal variation in the effectiveness of vaccination. Wyse
@@ -6840,7 +7119,7 @@ gt_tbl %&gt;%
   that overall there was insufficient overall evidence that
   administration of vaccines at different times of day affected immune
   outcomes. On the other hand, Vink <italic>et
-  al.</italic><sup><xref alt="104" rid="ref-RN1035-nb-article" ref-type="bibr">104</xref></sup>
+  al.</italic><sup><xref alt="106" rid="ref-RN1035-nb-article" ref-type="bibr">106</xref></sup>
   concluded that that morning vaccination enhanced antibody responses in
   adults aged 60 years and older, noting that this age group is a key
   demographic for influenza and COVID-19 vaccination. Studies qualified
@@ -6866,20 +7145,20 @@ gt_tbl %&gt;%
   with the remaining 10 studies reporting no effect. Of the studies that
   reported an association between TODV and outcome of vaccination, 3
   presented data that could be used to estimate the size of this
-  effect<sup><xref alt="100" rid="ref-RN957-nb-article" ref-type="bibr">100</xref>,<xref alt="102" rid="ref-RN954-nb-article" ref-type="bibr">102</xref>,<xref alt="105" rid="ref-RN1032-nb-article" ref-type="bibr">105</xref></sup>.
+  effect<sup><xref alt="100" rid="ref-RN957-nb-article" ref-type="bibr">100</xref>,<xref alt="102" rid="ref-RN954-nb-article" ref-type="bibr">102</xref>,<xref alt="107" rid="ref-RN1032-nb-article" ref-type="bibr">107</xref></sup>.
   For example, Hazan <italic>et
   al.</italic><sup><xref alt="102" rid="ref-RN954-nb-article" ref-type="bibr">102</xref></sup>
   estimated that optimising the time of vaccination might improve
   vaccine effectiveness by 8.6–25%.</p>
         <p>Vink <italic>et
-  al.</italic><sup><xref alt="104" rid="ref-RN1035-nb-article" ref-type="bibr">104</xref></sup>
+  al.</italic><sup><xref alt="106" rid="ref-RN1035-nb-article" ref-type="bibr">106</xref></sup>
   identified 860 records through their literature search, 17 of which
   met their eligibility criteria; five investigated the effect of
   vaccination timing on immune responses to influenza
-  vaccines<sup><xref alt="84" rid="ref-RN956-nb-article" ref-type="bibr">84</xref>,<xref alt="85" rid="ref-RN999-nb-article" ref-type="bibr">85</xref>,<xref alt="106" rid="ref-RN1036-nb-article" ref-type="bibr">106</xref>–<xref alt="108" rid="ref-RN1038-nb-article" ref-type="bibr">108</xref></sup>
+  vaccines<sup><xref alt="84" rid="ref-RN956-nb-article" ref-type="bibr">84</xref>,<xref alt="85" rid="ref-RN999-nb-article" ref-type="bibr">85</xref>,<xref alt="108" rid="ref-RN1036-nb-article" ref-type="bibr">108</xref>–<xref alt="110" rid="ref-RN1038-nb-article" ref-type="bibr">110</xref></sup>
   and nine explored how time of day influences immune responses to
   SARS-CoV-2
-  vaccines<sup><xref alt="100" rid="ref-RN957-nb-article" ref-type="bibr">100</xref>,<xref alt="101" rid="ref-RN1020-nb-article" ref-type="bibr">101</xref>,<xref alt="105" rid="ref-RN1032-nb-article" ref-type="bibr">105</xref>,<xref alt="109" rid="ref-RN1039-nb-article" ref-type="bibr">109</xref>–<xref alt="114" rid="ref-RN1044-nb-article" ref-type="bibr">114</xref></sup>.
+  vaccines<sup><xref alt="100" rid="ref-RN957-nb-article" ref-type="bibr">100</xref>,<xref alt="101" rid="ref-RN1020-nb-article" ref-type="bibr">101</xref>,<xref alt="107" rid="ref-RN1032-nb-article" ref-type="bibr">107</xref>,<xref alt="111" rid="ref-RN1039-nb-article" ref-type="bibr">111</xref>–<xref alt="116" rid="ref-RN1044-nb-article" ref-type="bibr">116</xref></sup>.
   Eleven out of the 17 studies reported statistically significant
   effects of vaccination timing, with ten reporting stronger antibody
   responses following morning vaccination, while one study favoured
@@ -6889,13 +7168,13 @@ gt_tbl %&gt;%
   showed stronger antibody responses for 60-year-olds or older for
   morning vs afternoon vaccination. Pooled results from two randomised
   controlled
-  trials<sup><xref alt="84" rid="ref-RN956-nb-article" ref-type="bibr">84</xref>,<xref alt="106" rid="ref-RN1036-nb-article" ref-type="bibr">106</xref></sup>
+  trials<sup><xref alt="84" rid="ref-RN956-nb-article" ref-type="bibr">84</xref>,<xref alt="108" rid="ref-RN1036-nb-article" ref-type="bibr">108</xref></sup>
   for influenza vaccination showed a statistically significant
   small-to-medium standardised mean difference (SMD) in antibody titers
   for adults aged 65 and older (effect size; SMD = 0.32, 95% CI =
   0.21–0.43), with morning vaccination consistently yielding higher
   titers 1 month post-vaccination. However, Vink <italic>et
-  al.</italic><sup><xref alt="104" rid="ref-RN1035-nb-article" ref-type="bibr">104</xref></sup>
+  al.</italic><sup><xref alt="106" rid="ref-RN1035-nb-article" ref-type="bibr">106</xref></sup>
   caution over-interpretation of this reported effect size due to the
   limited number of randomised controlled trials used in the
   meta-analysis.</p>
@@ -6927,7 +7206,7 @@ gt_tbl %&gt;%
   to support the idea that it can be a low-cost, low-risk strategy for
   boosting vaccine effectiveness? The case for chronovaccination –
   surveyed in systematic
-  reviews<sup><xref alt="2" rid="ref-RN928-nb-article" ref-type="bibr">2</xref>,<xref alt="104" rid="ref-RN1035-nb-article" ref-type="bibr">104</xref></sup>
+  reviews<sup><xref alt="2" rid="ref-RN928-nb-article" ref-type="bibr">2</xref>,<xref alt="106" rid="ref-RN1035-nb-article" ref-type="bibr">106</xref></sup>
   – is somewhat patchy. While the influence of TODV is compelling in
   animal studies where environmental conditions are strictly
   controlled<sup><xref alt="76" rid="ref-RN988-nb-article" ref-type="bibr">76</xref>,<xref alt="80" rid="ref-RN993-nb-article" ref-type="bibr">80</xref></sup>,
@@ -6946,7 +7225,7 @@ gt_tbl %&gt;%
   studies<sup><xref alt="102" rid="ref-RN954-nb-article" ref-type="bibr">102</xref>,<xref alt="103" rid="ref-RN1045-nb-article" ref-type="bibr">103</xref></sup>,
   but report modest effect sizes and suffer from potential biases due to
   non-randomisation of cohorts. Vink <italic>et
-  al.</italic><sup><xref alt="104" rid="ref-RN1035-nb-article" ref-type="bibr">104</xref></sup>
+  al.</italic><sup><xref alt="106" rid="ref-RN1035-nb-article" ref-type="bibr">106</xref></sup>
   demonstrated that the strongest evidence for diurnal variation in
   vaccination effectiveness was found for influenza vaccines using
   randomised control trials and Wyse <italic>et
@@ -6963,7 +7242,7 @@ gt_tbl %&gt;%
         <p>Even if there was a compelling advantage of TODV, would it be
   readily integrated into vaccination programmes? One only has to look
   at the debate around Daylight Saving Time
-  (DST)<sup><xref alt="115" rid="ref-RN1048-nb-article" ref-type="bibr">115</xref></sup>
+  (DST)<sup><xref alt="117" rid="ref-RN1048-nb-article" ref-type="bibr">117</xref></sup>
   to understand the sensitive nature of policies that have disruptive
   effects on social routines. Another relevant example is the idea of
   later school start times for adolescents – designed to align better
@@ -6984,19 +7263,19 @@ gt_tbl %&gt;%
   immunisation initiatives more narrowly aligned to an optimum TODV may
   be detrimental to vaccine uptake, although nudging based interventions
   have shown potential in bolstering intention to
-  vaccinate<sup><xref alt="116" rid="ref-RN1050-nb-article" ref-type="bibr">116</xref></sup>,
+  vaccinate<sup><xref alt="118" rid="ref-RN1050-nb-article" ref-type="bibr">118</xref></sup>,
   and may therefore be a useful strategy for fostering confidence in
   time-of-day vaccinations.</p>
         <p>While the benefits of TODV across whole populations remains
   marginal, a clearer case can be made for chronovaccination in adults
   60 years and older, where morning vaccination was more
-  beneficial<sup><xref alt="104" rid="ref-RN1035-nb-article" ref-type="bibr">104</xref></sup>.
+  beneficial<sup><xref alt="106" rid="ref-RN1035-nb-article" ref-type="bibr">106</xref></sup>.
   It has been speculated that immunosenescence - the gradual age-related
   decline in both innate and adaptive immune function - may play a
-  role<sup><xref alt="106" rid="ref-RN1036-nb-article" ref-type="bibr">106</xref>,<xref alt="117" rid="ref-RN1051-nb-article" ref-type="bibr">117</xref></sup>.
+  role<sup><xref alt="108" rid="ref-RN1036-nb-article" ref-type="bibr">108</xref>,<xref alt="119" rid="ref-RN1051-nb-article" ref-type="bibr">119</xref></sup>.
   Similarly, immunosuppressed individuals might benefit from
   TODV-mediated boosted vaccine
-  effectiveness<sup><xref alt="113" rid="ref-RN1043-nb-article" ref-type="bibr">113</xref>,<xref alt="114" rid="ref-RN1044-nb-article" ref-type="bibr">114</xref></sup>,
+  effectiveness<sup><xref alt="115" rid="ref-RN1043-nb-article" ref-type="bibr">115</xref>,<xref alt="116" rid="ref-RN1044-nb-article" ref-type="bibr">116</xref></sup>,
   suggesting that TODV may find a role in targeted age group and
   co-morbidity cohorts. The potential of infant chronovaccination is
   largely an unexplored area, with most studies focussed on adult
@@ -7014,7 +7293,7 @@ gt_tbl %&gt;%
   role of sleep in immune function, and therefore its contribution
   chronovaccination, is not developed in this review, Livieratos
   <italic>et
-  al.</italic><sup><xref alt="118" rid="ref-RN1058-nb-article" ref-type="bibr">118</xref></sup>
+  al.</italic><sup><xref alt="120" rid="ref-RN1058-nb-article" ref-type="bibr">120</xref></sup>
   have reviewed the evidence of the impact of circadian and sleep
   factors on influenza vaccine-induced immune responses, emphasising
   that yet another variable – sleep duration – should be considered for
@@ -7041,7 +7320,7 @@ gt_tbl %&gt;%
   nurses’ circadian rhythms in body temperature have been shown to be
   significantly misaligned due to shift working patterns, causing work
   and sleep schedules to be out of phase with each
-  other<sup><xref alt="119" rid="ref-RN1052-nb-article" ref-type="bibr">119</xref></sup>.
+  other<sup><xref alt="121" rid="ref-RN1052-nb-article" ref-type="bibr">121</xref></sup>.
   Both external time of vaccination and internal (biological) time
   recording are therefore important factors, with internal time
   recording representing a particular technical
@@ -7059,12 +7338,21 @@ gt_tbl %&gt;%
   of the role of circadian rhythms in relation to health and well-being,
   or ‘circadian hygiene’, might ultimately drive individual awareness of
   optimal times for vaccination. Therefore, as Vink <italic>et
-  al.</italic><sup><xref alt="104" rid="ref-RN1035-nb-article" ref-type="bibr">104</xref></sup>
+  al.</italic><sup><xref alt="106" rid="ref-RN1035-nb-article" ref-type="bibr">106</xref></sup>
   allude to in their review, the future vaccine customer may well regard
   optimal vaccination as an hourly continuous variable in relation to
   their personal circadian phase rather than the more blunt binary
   (morning <italic>vs</italic> afternoon) variable we currently
-  consider.</p>
+  consider. In this regard it will be particularly interesting to learn
+  the outcome of the ‘Chrono-Vax’ clinical trial that aims to determine
+  the effect of influenza vaccination timing on antibody and T-cell
+  responses across a continuous time window from early morning to late
+  afternoon for participants aged between 60 and 85 years
+  old<sup><xref alt="122" rid="ref-RN1063-nb-article" ref-type="bibr">122</xref></sup>.
+  Importantly, participants will be asked to provide data on their
+  history of shift work, comorbidities, (sleep) medication use,
+  lifestyle characteristics, as well as insights into their
+  chronotype<sup><xref alt="122" rid="ref-RN1063-nb-article" ref-type="bibr">122</xref></sup>.</p>
       </sec>
       <sec id="conclusions-nb-article">
         <title>8 Conclusions</title>
@@ -7082,7 +7370,11 @@ gt_tbl %&gt;%
   whether society buys into the idea and whether health agencies
   conclude that the fragility of vaccine uptake might ultimately be
   further jeopardised by changes to well established vaccination
-  programmes.</p>
+  programmes. While the timing of vaccinations may not be at the
+  forefront of our minds during interpandemic peace times, continued
+  research on the potential benefits of chronovaccination should be an
+  important strand of our approach to preparing for future
+  pandemics.</p>
       </sec>
       <sec id="acknowlegements-nb-article">
         <title>9 Acknowlegements</title>
@@ -7552,6 +7844,103 @@ gt_tbl %&gt;%
             <uri>https://www.ncbi.nlm.nih.gov/pubmed/26838474</uri>
             <pub-id pub-id-type="doi">10.1038/ncomms10580</pub-id>
             <fpage>10580</fpage>
+            <lpage/>
+          </element-citation>
+        </ref>
+        <ref id="ref-RN960-nb-article">
+          <element-citation publication-type="article-journal">
+            <person-group person-group-type="author">
+              <name>
+                <surname>Christensen</surname>
+                <given-names>J.</given-names>
+              </name>
+              <name>
+                <surname>Johansen</surname>
+                <given-names>N. D.</given-names>
+              </name>
+              <name>
+                <surname>Janstrup</surname>
+                <given-names>K. H.</given-names>
+              </name>
+              <name>
+                <surname>Modin</surname>
+                <given-names>D.</given-names>
+              </name>
+              <name>
+                <surname>Skaarup</surname>
+                <given-names>K. G.</given-names>
+              </name>
+              <name>
+                <surname>Nealon</surname>
+                <given-names>J.</given-names>
+              </name>
+              <name>
+                <surname>Samson</surname>
+                <given-names>S.</given-names>
+              </name>
+              <name>
+                <surname>Loiacono</surname>
+                <given-names>M.</given-names>
+              </name>
+              <name>
+                <surname>Harris</surname>
+                <given-names>R.</given-names>
+              </name>
+              <name>
+                <surname>Larsen</surname>
+                <given-names>C. S.</given-names>
+              </name>
+              <name>
+                <surname>Jensen</surname>
+                <given-names>A. M. R.</given-names>
+              </name>
+              <name>
+                <surname>Landler</surname>
+                <given-names>N. E.</given-names>
+              </name>
+              <name>
+                <surname>Claggett</surname>
+                <given-names>B. L.</given-names>
+              </name>
+              <name>
+                <surname>Solomon</surname>
+                <given-names>S. D.</given-names>
+              </name>
+              <name>
+                <surname>Gislason</surname>
+                <given-names>G. H.</given-names>
+              </name>
+              <name>
+                <surname>Kober</surname>
+                <given-names>L.</given-names>
+              </name>
+              <name>
+                <surname>Landray</surname>
+                <given-names>M. J.</given-names>
+              </name>
+              <name>
+                <surname>Sivapalan</surname>
+                <given-names>P.</given-names>
+              </name>
+              <name>
+                <surname>Jensen</surname>
+                <given-names>J. U. S.</given-names>
+              </name>
+              <name>
+                <surname>Biering-Sorensen</surname>
+                <given-names>T.</given-names>
+              </name>
+            </person-group>
+            <article-title>Time of day for vaccination, outcomes, and relative effectiveness of high-dose vs. Standard-dose quadrivalent influenza vaccine: A post hoc analysis of the DANFLU-1 randomized clinical trial</article-title>
+            <source>J Infect</source>
+            <year iso-8601-date="2024">2024</year>
+            <volume>89</volume>
+            <issue>5</issue>
+            <issn>1532-2742 (Electronic)
+      0163-4453 (Linking)</issn>
+            <uri>https://www.ncbi.nlm.nih.gov/pubmed/39303788</uri>
+            <pub-id pub-id-type="doi">10.1016/j.jinf.2024.106276</pub-id>
+            <fpage>106276</fpage>
             <lpage/>
           </element-citation>
         </ref>
@@ -8915,6 +9304,103 @@ gt_tbl %&gt;%
             <uri>https://www.ncbi.nlm.nih.gov/pubmed/36717561</uri>
             <pub-id pub-id-type="doi">10.1038/s41467-023-35979-2</pub-id>
             <fpage>476</fpage>
+            <lpage/>
+          </element-citation>
+        </ref>
+        <ref id="ref-RN959-nb-article">
+          <element-citation publication-type="article-journal">
+            <person-group person-group-type="author">
+              <name>
+                <surname>Johansen</surname>
+                <given-names>N. D.</given-names>
+              </name>
+              <name>
+                <surname>Modin</surname>
+                <given-names>D.</given-names>
+              </name>
+              <name>
+                <surname>Nealon</surname>
+                <given-names>J.</given-names>
+              </name>
+              <name>
+                <surname>Samson</surname>
+                <given-names>S.</given-names>
+              </name>
+              <name>
+                <surname>Salamand</surname>
+                <given-names>C.</given-names>
+              </name>
+              <name>
+                <surname>Loiacono</surname>
+                <given-names>M. M.</given-names>
+              </name>
+              <name>
+                <surname>Larsen</surname>
+                <given-names>C. S.</given-names>
+              </name>
+              <name>
+                <surname>Jensen</surname>
+                <given-names>A. M. R.</given-names>
+              </name>
+              <name>
+                <surname>Landler</surname>
+                <given-names>N. E.</given-names>
+              </name>
+              <name>
+                <surname>Claggett</surname>
+                <given-names>B. L.</given-names>
+              </name>
+              <name>
+                <surname>Solomon</surname>
+                <given-names>S. D.</given-names>
+              </name>
+              <name>
+                <surname>Landray</surname>
+                <given-names>M. J.</given-names>
+              </name>
+              <name>
+                <surname>Gislason</surname>
+                <given-names>G. H.</given-names>
+              </name>
+              <name>
+                <surname>Kober</surname>
+                <given-names>L.</given-names>
+              </name>
+              <name>
+                <surname>Jensen</surname>
+                <given-names>J. U. S.</given-names>
+              </name>
+              <name>
+                <surname>Sivapalan</surname>
+                <given-names>P.</given-names>
+              </name>
+              <name>
+                <surname>Vestergaard</surname>
+                <given-names>L. S.</given-names>
+              </name>
+              <name>
+                <surname>Valentiner-Branth</surname>
+                <given-names>P.</given-names>
+              </name>
+              <name>
+                <surname>Krause</surname>
+                <given-names>T. G.</given-names>
+              </name>
+              <name>
+                <surname>Biering-Sorensen</surname>
+                <given-names>T.</given-names>
+              </name>
+            </person-group>
+            <article-title>A pragmatic randomized feasibility trial of influenza vaccines</article-title>
+            <source>NEJM Evid</source>
+            <year iso-8601-date="2023">2023</year>
+            <volume>2</volume>
+            <issue>2</issue>
+            <issn>2766-5526 (Electronic)
+      2766-5526 (Linking)</issn>
+            <uri>https://www.ncbi.nlm.nih.gov/pubmed/38320035</uri>
+            <pub-id pub-id-type="doi">10.1056/EVIDoa2200206</pub-id>
+            <fpage>EVIDoa2200206</fpage>
             <lpage/>
           </element-citation>
         </ref>
@@ -11220,6 +11706,62 @@ gt_tbl %&gt;%
             <uri>https://www.ncbi.nlm.nih.gov/pubmed/34285349</uri>
             <pub-id pub-id-type="doi">10.1038/s41598-021-94459-z</pub-id>
             <fpage>14792</fpage>
+            <lpage/>
+          </element-citation>
+        </ref>
+        <ref id="ref-RN1063-nb-article">
+          <element-citation publication-type="article-journal">
+            <person-group person-group-type="author">
+              <name>
+                <surname>Vink</surname>
+                <given-names>K.</given-names>
+              </name>
+              <name>
+                <surname>Brouwers</surname>
+                <given-names>T. M. J.</given-names>
+              </name>
+              <name>
+                <surname>Beckers</surname>
+                <given-names>L.</given-names>
+              </name>
+              <name>
+                <surname>Smit</surname>
+                <given-names>D.</given-names>
+              </name>
+              <name>
+                <surname>Vos</surname>
+                <given-names>M.</given-names>
+              </name>
+              <name>
+                <surname>Guichelaar</surname>
+                <given-names>T.</given-names>
+              </name>
+              <name>
+                <surname>Bonten</surname>
+                <given-names>T. N.</given-names>
+              </name>
+              <name>
+                <surname>Kervezee</surname>
+                <given-names>L.</given-names>
+              </name>
+              <name>
+                <surname>Baarle</surname>
+                <given-names>D. van</given-names>
+              </name>
+              <name>
+                <surname>Wallinga</surname>
+                <given-names>J.</given-names>
+              </name>
+            </person-group>
+            <article-title>The chrono-vax trial protocol: The effect of the time of day of influenza vaccination on immune responses in adults aged 60-85 years</article-title>
+            <source>Contemp Clin Trials</source>
+            <year iso-8601-date="2025">2025</year>
+            <volume>156</volume>
+            <issn>1559-2030 (Electronic)
+      1551-7144 (Linking)</issn>
+            <uri>https://www.ncbi.nlm.nih.gov/pubmed/40752819</uri>
+            <pub-id pub-id-type="doi">10.1016/j.cct.2025.108040</pub-id>
+            <fpage>108040</fpage>
             <lpage/>
           </element-citation>
         </ref>
